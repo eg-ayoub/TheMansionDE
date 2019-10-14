@@ -3,6 +3,8 @@ using UnityEngine;
 namespace Player.Health
 {
     using State;
+    using UI.HUD;
+
     /// <summary>
     /// manages player HP
     /// </summary>
@@ -21,21 +23,11 @@ namespace Player.Health
         /// </summary>
         [SerializeField, Header("Post Hit Immunity")]
         int damageReturnTimer;
-        /// <summary>
-        /// max HP bar capacity
-        /// </summary>
-        int maxHP;
-
-        bool healing;
-        bool interrupt;
-
-        [SerializeField] int popoyaTimer;
         private void Start()
         {
             takingDamage = true;
-            maxHP = 7;
-            HP = 5;
-            //!HudScript.hud.UpdateHP(HP, maxHP);
+            HP = 3;
+            HudScript.hud.UpdateHP(HP);
         }
         // Update is called once per frame
         public void TakeDamage(int damage)
@@ -53,8 +45,7 @@ namespace Player.Health
                     HP -= damage;
                     StartCoroutine(DamageStop());
                 }
-                // Interrupt();
-                //!HudScript.hud.UpdateHP(HP, maxHP);
+                HudScript.hud.UpdateHP(HP);
             }
         }
         /// <summary>
@@ -65,8 +56,8 @@ namespace Player.Health
         {
             if (!paused)
             {
-                HP = Mathf.Clamp(HP + 1, 0, maxHP);
-                //!HudScript.hud.UpdateHP(HP, maxHP);
+                HP = Mathf.Clamp(HP + 1, 0, Constants.Constants.PLAYER_MAX_HP);
+                HudScript.hud.UpdateHP(HP);
             }
 
         }
@@ -99,24 +90,8 @@ namespace Player.Health
         /// <param name="health">new HP value</param>
         void SetHP(int health)
         {
-            HP = Mathf.Clamp(health, 0, maxHP);
-            //!HudScript.hud.UpdateHP(HP, maxHP);
-        }
-        /// <summary>
-        /// setter for maxHP, used to load saved game
-        /// </summary>
-        /// <param name="maxhealth">new maxHP value</param>
-        void SetMaxHP(int maxhealth)
-        {
-            maxHP = Mathf.Clamp(maxhealth, 1, 20);
-            //!HudScript.hud.UpdateHP(HP, maxHP);
-        }
-        /// <summary>
-        /// getter for maxHP value
-        /// </summary>
-        public int GetMaxHP()
-        {
-            return maxHP;
+            HP = Mathf.Clamp(health, 0, Constants.Constants.PLAYER_MAX_HP);
+            HudScript.hud.UpdateHP(HP);
         }
 
     }

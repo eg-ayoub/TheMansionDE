@@ -42,7 +42,7 @@ public class SensorOnOff : MonoBehaviour
     /// </summary>
     void OnDrawGizmos()
     {
-        Gizmos.color = getState() ? Color.green : Color.red;
+        Gizmos.color = getState() ? new Color(1, 0, 0, .5f) : new Color(0, 1, 0, .5f);
         Gizmos.DrawCube(
             transform.position,
             transform.lossyScale
