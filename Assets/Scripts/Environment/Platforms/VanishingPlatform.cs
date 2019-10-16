@@ -6,9 +6,14 @@ namespace Environment.Platforms
     /// </summary>
     public class VanishingPlatform : Platform
     {
+        Animator animator ;
+        private void Start()
+        {
+            animator = GetComponent<Animator>(); 
+        }
         public override void PlayerOff()
         {
-            Vanish();
+            animator.SetTrigger("vanish");
         }
 
         public override void PlayerOn()
@@ -16,7 +21,7 @@ namespace Environment.Platforms
             // ! do nothing
         }
 
-        void Vanish()
+        public void Vanish()
         {
             Destroy(gameObject);
         }
