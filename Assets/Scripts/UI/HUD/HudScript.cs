@@ -10,6 +10,7 @@ namespace UI.HUD
         HPDisplay hPDisplay;
         LevelDisplay levelDisplay;
         KeyStatusDisplay keyStatusDisplay;
+        TimerDisplay timerDisplay;
 
         private void Awake()
         {
@@ -28,6 +29,7 @@ namespace UI.HUD
             hPDisplay = GetComponentInChildren<HPDisplay>();
             levelDisplay = GetComponentInChildren<LevelDisplay>();
             keyStatusDisplay = GetComponentInChildren<KeyStatusDisplay>();
+            timerDisplay = GetComponentInChildren<TimerDisplay>();
         }
 
         public void UpdateHP(int HP)
@@ -43,6 +45,11 @@ namespace UI.HUD
         public void UpdateKeyStatus(bool status)
         {
             keyStatusDisplay.UpdateKeyStatus(status);
+        }
+
+        public void UpdateTimer(int time)
+        {
+            timerDisplay.SetTime(time);
         }
 
     }

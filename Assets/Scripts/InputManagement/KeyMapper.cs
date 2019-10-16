@@ -111,5 +111,13 @@ namespace InputManagement
                 }
             }
         }
+
+        /// <summary>
+        /// this method overrides controls for current frame
+        /// </summary>
+        public void ResetAll()
+        {
+            Input.ResetInputAxes();
+        }
     }
 }
