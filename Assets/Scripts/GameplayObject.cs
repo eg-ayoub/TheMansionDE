@@ -1,7 +1,7 @@
 using UnityEngine;
 public abstract class GameplayObject : MonoBehaviour
 {
-    protected bool paused;
+    protected bool paused = true;
 
     public virtual void OnPauseGame()
     {

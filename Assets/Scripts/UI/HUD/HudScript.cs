@@ -17,6 +17,7 @@ namespace UI.HUD
             if (hud == null)
             {
                 hud = this;
+                DontDestroyOnLoad(this);
             }
             else if (hud != this)
             {

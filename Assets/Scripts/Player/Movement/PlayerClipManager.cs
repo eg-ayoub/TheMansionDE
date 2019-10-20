@@ -59,8 +59,7 @@ namespace Player
             float VerticalRaySpacing;
             Transform playerTransform;
 
-
-
+            bool frozen;
 
             void Start()
             {
@@ -86,7 +85,10 @@ namespace Player
                     PlayerRect.Reset(PlayerBox, skinWidth);
                     VerticalMove(ref deltaPosition);
                     HorizontalMove(ref deltaPosition);
-                    playerTransform.Translate(deltaPosition);
+                    if (!frozen)
+                    {
+                        playerTransform.Translate(deltaPosition);
+                    }
                 }
             }
 
@@ -140,6 +142,16 @@ namespace Player
             public void SetDeltaPosition(Vector2 move)
             {
                 deltaPosition = move;
+            }
+
+            public void UnFreeze()
+            {
+                frozen = false;
+            }
+
+            public void Freeze()
+            {
+                frozen = true;
             }
         }
     }

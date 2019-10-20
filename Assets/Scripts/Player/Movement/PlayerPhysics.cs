@@ -92,26 +92,7 @@ namespace Player.Movement
         {
             targetSpeed = speed;
         }
-        /// <summary>
-        /// freeze's the player's movements momentarily
-        /// </summary>
-        public void Freeze()
-        {
-            StartCoroutine(FreezeMovement());
-        }
-        /// <summary>
-        /// coroutine that freeze's the player's movements for 10 frames
-        /// </summary>
-        /// <returns></returns>
-        IEnumerator FreezeMovement()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                targetSpeed = Vector2.zero;
-                yield return null;
-            }
 
-        }
         /// <summary>
         /// setter for gravity
         /// </summary>

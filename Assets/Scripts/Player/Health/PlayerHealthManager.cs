@@ -1,9 +1,9 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using UI.HUD;
+using Management;
 namespace Player.Health
 {
     // using State;
-    using UI.HUD;
 
     /// <summary>
     /// manages player HP
@@ -11,39 +11,27 @@ namespace Player.Health
     public class PlayerHealthManager : GameplayObject
     {
         /// <summary>
-        /// whether the player is taking damage ( post - hit immunity)
-        /// </summary>
-        bool takingDamage;
-        /// <summary>
         /// current HP value
         /// </summary>
         [SerializeField] int HP;
-        /// <summary>
-        /// timer before player can take damage again
-        /// </summary>
-        [SerializeField, Header("Post Hit Immunity")]
-        int damageReturnTimer;
         private void Start()
         {
-            takingDamage = true;
             HP = 3;
             HudScript.hud.UpdateHP(HP);
         }
         // Update is called once per frame
-        public void TakeDamage(int damage)
+        public void TakeDamage()
         {
-            if (!paused && takingDamage && damage >= 0)
+            if (!paused)
             {
-                if (damage >= HP)
+                if (HP == 1)
                 {
-                    HP = 0;
-                    // GameManagerScript.gameManager.ReturnToCheckPoint();
-                    //wtf happens in this case
+                    GameManagerScript.gameManager.ReturnToCheckPoint();
                 }
                 else
                 {
-                    HP -= damage;
-                    StartCoroutine(DamageStop());
+                    HP -= 1;
+                    GameManagerScript.gameManager.RestartLevel();
                 }
                 HudScript.hud.UpdateHP(HP);
             }
@@ -63,27 +51,13 @@ namespace Player.Health
         }
 
         /// <summary>
-        /// applies player HP immunity after hit
-        /// </summary>
-        IEnumerator DamageStop()
-        {
-            takingDamage = false;
-            //PlayerInstanciationScript.player.GetComponentInChildren<MeshRenderer>().material.color = Color.red;
-            for (int i = 0; i < damageReturnTimer; i++)
-            {
-                yield return 0;
-            }
-            takingDamage = true;
-            //PlayerInstanciationScript.player.GetComponentInChildren<MeshRenderer>().material.color = Color.white;
-
-        }
-        /// <summary>
         /// getter for HP value
         /// </summary>
         public int GetHP()
         {
             return HP;
         }
+
         /// <summary>
         /// setter for HP value, used to load saved game
         /// </summary>

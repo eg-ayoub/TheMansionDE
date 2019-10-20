@@ -115,7 +115,7 @@ namespace InputManagement
         /// <summary>
         /// this method overrides controls for current frame
         /// </summary>
-        public void ResetAll()
+        public static void ResetAll()
         {
             Input.ResetInputAxes();
         }
