@@ -32,14 +32,13 @@ namespace Player.Controls
                 movementModifier.SetControls(
                     KeyMapper.GetButtonUp("Jump"),
                     KeyMapper.GetButtonDown("Jump"),
-                    KeyMapper.GetAxis("Horizontal"),
-                    KeyMapper.GetAxis("Vertical")
+                    KeyMapper.GetAxis("Horizontal")
                 );
 
                 PlayerInstanciationScript.player.direction
                     = KeyMapper.GetAxis("Horizontal") > 0
-                    ? Constants.DIRECTION.RIGHT
-                    : Constants.DIRECTION.LEFT;
+                    ? DIRECTION.RIGHT
+                    : DIRECTION.LEFT;
 
             }
         }

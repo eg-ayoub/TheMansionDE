@@ -8,8 +8,8 @@ namespace InputManagement
     /// </summary>
     public class KeyMapper
     {
-        public const int BUTTON_COUNT = 2;
-        public const int AXIS_COUNT = 2;
+        public const int BUTTON_COUNT = 3;
+        public const int AXIS_COUNT = 1;
         /// <summary>
         /// key map
         /// </summary>
@@ -23,15 +23,15 @@ namespace InputManagement
         /// </summary>
         static string[] actions = new string[BUTTON_COUNT]{
             "Jump", //Space
-            "Pause" //Pause
+            "Pause",//Pause
+            "Start"//Start Level
 		};
 
         /// <summary>
         /// game's axes
         /// </summary>
         static string[] axes = new string[AXIS_COUNT]{
-            "Horizontal",
-            "Vertical",
+            "Horizontal"
         };
 
         /// <summary>

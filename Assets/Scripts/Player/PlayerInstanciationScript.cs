@@ -24,7 +24,7 @@ namespace Player
         /// <summary>
         /// direction the player is looking at
         /// </summary>
-        public Constants.DIRECTION direction;
+        public DIRECTION direction;
 
 
         public static PlayerHealthManager hpManager;

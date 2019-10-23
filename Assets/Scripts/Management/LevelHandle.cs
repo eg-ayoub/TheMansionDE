@@ -6,6 +6,8 @@ namespace Management
     {
         public int buildIndex;
 
+        public CHECKPOINTS checkpoint;
+
         public Transform spawnpoint;
 
         private void Start()

@@ -53,5 +53,19 @@ namespace UI.HUD
             timerDisplay.SetTime(time);
         }
 
+        public void ExitHub()
+        {
+            timerDisplay.gameObject.SetActive(true);
+            keyStatusDisplay.gameObject.SetActive(true);
+            levelDisplay.gameObject.SetActive(true);
+        }
+
+        public void EnterHub()
+        {
+            timerDisplay.gameObject.SetActive(false);
+            keyStatusDisplay.gameObject.SetActive(false);
+            levelDisplay.gameObject.SetActive(false);
+        }
+
     }
 }

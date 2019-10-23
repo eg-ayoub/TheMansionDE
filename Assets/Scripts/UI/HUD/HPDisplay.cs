@@ -4,17 +4,17 @@ namespace UI.HUD
 {
     public class HPDisplay : MonoBehaviour
     {
-        public ImageIndicator[] indicators = new ImageIndicator[Constants.Constants.PLAYER_MAX_HP];
+        public ImageIndicator[] indicators = new ImageIndicator[Constants.PLAYER_MAX_HP];
         private void Start()
         {
-            for (int i = 0; i < Constants.Constants.PLAYER_MAX_HP; i++)
+            for (int i = 0; i < Constants.PLAYER_MAX_HP; i++)
             {
                 indicators[i] = transform.GetChild(i).GetComponent<ImageIndicator>();
             }
         }
         public void UpdateHP(int HP)
         {
-            for (int i = 0; i < Constants.Constants.PLAYER_MAX_HP; i++)
+            for (int i = 0; i < Constants.PLAYER_MAX_HP; i++)
             {
                 if (HP >= i + 1)
                 {

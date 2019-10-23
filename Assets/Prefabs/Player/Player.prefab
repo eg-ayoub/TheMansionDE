@@ -44,7 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 3
-  damageReturnTimer: 0
 --- !u!1 &2100811516
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,7 +523,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3585899717298485602, guid: 90fdd56277d286f419c6b92deb09e5e2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

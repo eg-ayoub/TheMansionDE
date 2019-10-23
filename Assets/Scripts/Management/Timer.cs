@@ -15,6 +15,7 @@ namespace Management
         {
             StartTimer();
         }
+
         public void StartTimer()
         {
             now = (int)(1000 * Time.time);

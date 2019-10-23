@@ -16,7 +16,7 @@ namespace Player.Health
         [SerializeField] int HP;
         private void Start()
         {
-            HP = 3;
+            HP = Constants.PLAYER_START_HP;
             HudScript.hud.UpdateHP(HP);
         }
         // Update is called once per frame
@@ -26,7 +26,7 @@ namespace Player.Health
             {
                 if (HP == 1)
                 {
-                    GameManagerScript.gameManager.ReturnToCheckPoint();
+                    GameManagerScript.gameManager.ReturnToMain();
                 }
                 else
                 {
@@ -44,7 +44,7 @@ namespace Player.Health
         {
             if (!paused)
             {
-                HP = Mathf.Clamp(HP + 1, 0, Constants.Constants.PLAYER_MAX_HP);
+                HP = Mathf.Clamp(HP + 1, 0, Constants.PLAYER_MAX_HP);
                 HudScript.hud.UpdateHP(HP);
             }
 
@@ -62,9 +62,9 @@ namespace Player.Health
         /// setter for HP value, used to load saved game
         /// </summary>
         /// <param name="health">new HP value</param>
-        void SetHP(int health)
+        public void SetHP(int health)
         {
-            HP = Mathf.Clamp(health, 0, Constants.Constants.PLAYER_MAX_HP);
+            HP = Mathf.Clamp(health, 0, Constants.PLAYER_MAX_HP);
             HudScript.hud.UpdateHP(HP);
         }
 

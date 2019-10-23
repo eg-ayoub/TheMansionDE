@@ -10,11 +10,11 @@ namespace InputManagement
          */
         public static ButtonMap[] kbButtons = new ButtonMap[KeyMapper.BUTTON_COUNT]{
             new KeyCodeButtonMap(KeyCode.Space),
-            new KeyCodeButtonMap(KeyCode.Escape)
+            new KeyCodeButtonMap(KeyCode.Escape),
+            new KeyCodeButtonMap(KeyCode.UpArrow)
         };
         public static AxisMap[] kbAxes = new AxisMap[KeyMapper.AXIS_COUNT]{
             new AxisMap("KBH"),
-            new AxisMap("KBV"),
         };
 
         /*
@@ -56,7 +56,8 @@ namespace InputManagement
         /// </summary>
         public static ButtonMap[] XBoxOneButtons = new ButtonMap[KeyMapper.BUTTON_COUNT]{
             XBoxOneAllButtons["A"], // A -> jump
-            XBoxOneAllButtons["START"] //START -> pause
+            XBoxOneAllButtons["START"], //START -> pause
+            XBoxOneAllButtons["HU"] //HAT UP -> enter level
         };
 
         /// <summary>
@@ -81,7 +82,6 @@ namespace InputManagement
         /// </summary>
         public static AxisMap[] XBoxAxes = new AxisMap[KeyMapper.AXIS_COUNT]{
             XBoxOneAllAxes["LSH"],
-            XBoxOneAllAxes["LSV"],
         };
 
         /// <summary>
@@ -133,7 +133,8 @@ namespace InputManagement
         /// </summary>
         public static ButtonMap[] DS4Buttons = new ButtonMap[KeyMapper.BUTTON_COUNT]{
             DS4AllButtons["Cross"], // Cross -> jump
-            DS4AllButtons["START"] //START -> pause
+            DS4AllButtons["START"], //START -> pause
+            DS4AllButtons["HU"]
         };
 
         /// <summary>
@@ -141,7 +142,6 @@ namespace InputManagement
         /// </summary>
         public static AxisMap[] DS4Axes = new AxisMap[KeyMapper.AXIS_COUNT]{
             DS4AllAxes["LSH"],
-            DS4AllAxes["LSV"],
         };
 
         public static void UpdaterSetup(AxisButtonUpdater updater)

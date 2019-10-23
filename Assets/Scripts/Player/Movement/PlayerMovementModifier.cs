@@ -48,7 +48,7 @@ namespace Player
             /// <summary>
             /// joystick 
             /// </summary>
-            float horizontal, vertical;
+            float horizontal;
             /// <summary>
             /// double jump state : false if the player has just used doublejump
             /// </summary>
@@ -144,12 +144,11 @@ namespace Player
             /// <param name="JDOWN">jump button up</param>
             /// <param name="h">horizontal stick axis</param>
             /// <param name="v">vertical stick axis</param>
-            public void SetControls(bool JUP, bool JDOWN, float h, float v)
+            public void SetControls(bool JUP, bool JDOWN, float h)
             {
                 jumpButtonUp = JUP;
                 jumpButtonDown = JDOWN;
                 horizontal = h;
-                vertical = v;
             }
 
             private void Update()
