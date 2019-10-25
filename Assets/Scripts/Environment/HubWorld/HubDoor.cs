@@ -10,6 +10,7 @@ namespace Environment.HubWorld
         public Sprite inaccessibleSprite;
         public Sprite finishedSprite;
         SpriteRenderer sprite;
+       
 
         public bool accessible;
 
@@ -29,7 +30,7 @@ namespace Environment.HubWorld
             if (accessible)
             {
                 sprite.sprite = accessibleSprite;
-                if (finished)
+                if (finished) 
                 {
                     sprite.sprite = finishedSprite;
                 }
