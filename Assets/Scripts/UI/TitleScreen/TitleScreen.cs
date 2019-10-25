@@ -28,10 +28,10 @@ namespace UI.TitleScreen
             animator.SetTrigger("Start");
         }
 
-        public void Kill()
-        {
-            // * un-pause game 
-            animator.SetTrigger("Kill");
-        }
+        // public void Kill()
+        // {
+        //     // * un-pause game 
+        //     animator.SetTrigger("Kill");
+        // }
     }
 }
