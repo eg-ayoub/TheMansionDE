@@ -1,6 +1,7 @@
 using UnityEngine;
 using InputManagement;
 using Management;
+using UnityEngine.Experimental.Rendering.Universal;
 
 namespace Environment.HubWorld
 {
@@ -10,7 +11,8 @@ namespace Environment.HubWorld
         public Sprite inaccessibleSprite;
         public Sprite finishedSprite;
         SpriteRenderer sprite;
-       
+        Light2D mLight;
+
 
         public bool accessible;
 
@@ -23,6 +25,7 @@ namespace Environment.HubWorld
         private void Start()
         {
             sprite = GetComponent<SpriteRenderer>();
+            mLight = GetComponent<Light2D>();
         }
 
         public void Init()
@@ -30,7 +33,7 @@ namespace Environment.HubWorld
             if (accessible)
             {
                 sprite.sprite = accessibleSprite;
-                if (finished) 
+                if (finished)
                 {
                     sprite.sprite = finishedSprite;
                 }
@@ -38,6 +41,7 @@ namespace Environment.HubWorld
             else
             {
                 sprite.sprite = inaccessibleSprite;
+                mLight.enabled = false;
             }
 
         }
