@@ -52,7 +52,7 @@ namespace Player.Movement
             paused = false;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             if (!paused)
             {

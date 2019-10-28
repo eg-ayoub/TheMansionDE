@@ -78,7 +78,7 @@ namespace Player
 
 
 
-            void FixedUpdate()
+            void Update()
             {
                 if (!paused)
                 {
