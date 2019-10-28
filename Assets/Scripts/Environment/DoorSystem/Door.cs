@@ -4,18 +4,22 @@ namespace Environment.DoorSystem
 {
     public class Door : GameplayObject
     {
+
+        public Sprite openSprite;
+        public Sprite closedSprite;
         private Key key;
         private bool unlocked;
 
         private void Start()
         {
+            GetComponent<SpriteRenderer>().sprite = closedSprite;
             key = GetComponentInChildren<Key>();
             key.Init(this);
         }
 
         public void Unlock()
         {
-            Debug.Log("unlocked !");
+            GetComponent<SpriteRenderer>().sprite = openSprite;
             unlocked = true;
         }
 

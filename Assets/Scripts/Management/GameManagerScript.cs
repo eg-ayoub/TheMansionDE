@@ -350,6 +350,10 @@ namespace Management
             ToggleGamePaused();
             yield return null;
 
+            // * 7b set some UI stuff
+            HudScript.hud.UpdateKeyStatus(false);
+            HudScript.hud.UpdateLevel(currentHandle.buildIndex);
+
             // * 8 - freeze player and reset controls for 10 frames
             PlayerInstanciationScript.clipManager.Freeze();
             for (int _ = 0; _ < 10; _++)
@@ -358,12 +362,6 @@ namespace Management
                 yield return null;
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
-
-            // // * 9 - restart timer
-            // if (nextLevel == 0)
-            // {
-            //     timer.StopTimer();
-            // }
         }
 
     }

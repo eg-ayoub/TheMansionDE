@@ -1,4 +1,5 @@
 using UnityEngine;
+using UI.HUD;
 namespace Environment.DoorSystem
 {
     public class Key : GameplayObject
@@ -15,6 +16,8 @@ namespace Environment.DoorSystem
             if (other.CompareTag("Player") && !paused)
             {
                 door.Unlock();
+                HudScript.hud.UpdateKeyStatus(true);
+                Destroy(gameObject);
             }
         }
     }
