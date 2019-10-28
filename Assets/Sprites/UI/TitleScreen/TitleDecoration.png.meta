@@ -1,0 +1,463 @@
+fileFormatVersion: 2
+guid: cc5669e9312c42fec922d7a5da03f84e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8256609983678007965
+    second: TitleDecoration_0
+  - first:
+      213: 3864717423947792213
+    second: TitleDecoration_1
+  - first:
+      213: -178478996228644535
+    second: TitleDecoration_2
+  - first:
+      213: 8597374688422927694
+    second: TitleDecoration_3
+  - first:
+      213: -7397154207673013011
+    second: TitleDecoration_4
+  - first:
+      213: 2343641105597991719
+    second: TitleDecoration_5
+  - first:
+      213: 7970463058559155270
+    second: TitleDecoration_6
+  - first:
+      213: -6715417947777764166
+    second: TitleDecoration_7
+  - first:
+      213: 4494456704645181997
+    second: TitleDecoration_8
+  - first:
+      213: 2350834534395135587
+    second: TitleDecoration_9
+  - first:
+      213: 5644981823719809685
+    second: TitleDecoration_10
+  - first:
+      213: -8325040052744054032
+    second: TitleDecoration_11
+  - first:
+      213: 1358016572569604865
+    second: TitleDecoration_12
+  - first:
+      213: 6575783916938283034
+    second: TitleDecoration_13
+  - first:
+      213: -6408570340243511980
+    second: TitleDecoration_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TitleDecoration_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6861.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2378026f2632ebb8d8da595a8c385f
+      internalID: -8256609983678007965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6371.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc8a8ce5077b1948bc6520b9fc580b5
+      internalID: 3864717423947792213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5881.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424bf53e5145e617ca6b5bae710d343f
+      internalID: -178478996228644535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5391.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4a3ade29b8e6ee5a44d29affaf3044
+      internalID: 8597374688422927694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4901.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ba674bb649ede29b5f51de62e3a96b
+      internalID: -7397154207673013011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4411.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ec6b7b309611d65a7edef203781e84
+      internalID: 2343641105597991719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3921.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024142946753b9fafad390fe97ff59ba
+      internalID: 7970463058559155270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3431.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b7972c386df34bea16d721fea37161
+      internalID: -6715417947777764166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2941.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b1ebf1b2d5f755bb434fca843ab930
+      internalID: 4494456704645181997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2451.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932561ce59cdf2347af657e42040a209
+      internalID: 2350834534395135587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1961.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab03fecb9da503fb8aeee61006f426d
+      internalID: 5644981823719809685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1471.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b496cd08eb56b6e5a8462bf3a0107dec
+      internalID: -8325040052744054032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 981.8667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafb22da5297168a79acf5407c446f27
+      internalID: 1358016572569604865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 491.86667
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda719acafa9a996caaef639a745f735
+      internalID: 6575783916938283034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleDecoration_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.8666687
+        width: 3840
+        height: 490.13333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35389721ca6898fabb32f534ee37a2ae
+      internalID: -6408570340243511980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

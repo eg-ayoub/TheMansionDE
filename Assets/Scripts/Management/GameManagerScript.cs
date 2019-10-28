@@ -60,7 +60,9 @@ namespace Management
             {
                 Application.targetFrameRate = 60;
             }
+#if UNITY_EDITOR
             ToggleGamePaused();
+#endif
             timer = GetComponentInChildren<Timer>();
             saveManager = GetComponentInChildren<SaveManager>();
         }
@@ -116,6 +118,11 @@ namespace Management
         public void Enter(int target)
         {
             StartCoroutine(EnterLevel(target));
+        }
+
+        public void Next()
+        {
+            StartCoroutine(NextLevel());
         }
 
         IEnumerator EnterLevel(int index)

@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
+using Management;
+using InputManagement;
 
 namespace UI.TitleScreen
 {
@@ -8,6 +8,8 @@ namespace UI.TitleScreen
     {
         public static TitleScreen titleScreen;
         Animator animator;
+        bool finished;
+        bool fadedIn;
 
         private void Awake()
         {
@@ -24,14 +26,33 @@ namespace UI.TitleScreen
 
         private void Start()
         {
+            #if !UNITY_EDITOR
             animator = GetComponent<Animator>();
             animator.SetTrigger("Start");
+            GameManagerScript.gameManager.LockPause();
+            #endif
         }
 
-        // public void Kill()
-        // {
-        //     // * un-pause game 
-        //     animator.SetTrigger("Kill");
-        // }
+        private void Update()
+        {
+            if (!finished && KeyMapper.AnyKeyDown() && fadedIn)
+            {
+                LaunchGame();
+            }
+        }
+
+        private void LaunchGame()
+        {
+            finished = true;
+            GameManagerScript.gameManager.UnLockPause();
+            GameManagerScript.gameManager.ToggleGamePaused();
+            animator.SetTrigger("Launch");
+
+        }
+
+        public void FadeInFinished()
+        {
+            fadedIn = true;
+        }
     }
 }

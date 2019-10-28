@@ -17,7 +17,6 @@ namespace Player
             private void Start()
             {
                 animator = GetComponent<Animator>();
-                StartCoroutine(BlinkCycle());
             }
             /// <summary>
             /// sets the runblend for interpolation between run and idle anim
@@ -144,47 +143,6 @@ namespace Player
                 animator.ResetTrigger("fall");
                 animator.ResetTrigger("wall");
                 //animator.ResetTrigger("flip");
-            }
-
-            IEnumerator BlinkCycle()
-            {
-                yield return null;
-                bool hasBlinked = false;
-                while (true)
-                {
-                    animator.SetFloat("blinkblend", 1);
-                    for (int _ = 0; _ < 8; _++)
-                    {
-                        if (paused)
-                        {
-                            _--;
-                        }
-                        yield return null;
-                    }
-                    animator.SetFloat("blinkblend", 0);
-                    yield return null;
-                    yield return null;
-                    int waitTime = UnityEngine.Random.Range(hasBlinked ? 15 : 0, 60);
-                    if (hasBlinked)
-                    {
-                        hasBlinked = false;
-                    }
-                    else
-                    {
-                        if (waitTime == 0)
-                        {
-                            hasBlinked = true;
-                        }
-                    }
-                    for (int _ = 0; _ < waitTime * 4; _++)
-                    {
-                        if (paused)
-                        {
-                            _--;
-                        }
-                        yield return null;
-                    }
-                }
             }
 
             public override void OnPauseGame()

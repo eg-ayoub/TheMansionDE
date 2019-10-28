@@ -119,5 +119,10 @@ namespace InputManagement
         {
             Input.ResetInputAxes();
         }
+
+        public static bool AnyKeyDown()
+        {
+            return Input.anyKeyDown;
+        }
     }
 }

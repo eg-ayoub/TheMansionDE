@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d5626f16ab0455760a660651f066bb5b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bluu Next
+  fontNames:
+  - Bluu Next
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b2a7fa564b6b238a4b2937ebbe01690d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

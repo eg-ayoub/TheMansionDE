@@ -25,6 +25,7 @@ namespace Environment.Platforms
 
         public void BouncePlayer()
         {
+            PlayerInstanciationScript.playerTransform.Translate(300 * Vector3.up);
             PlayerInstanciationScript.movementModifier.TrampolineJump(pinnacle);
         }
 

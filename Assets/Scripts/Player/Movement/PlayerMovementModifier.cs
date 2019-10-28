@@ -230,17 +230,10 @@ namespace Player
                         else if (playerOnLeftWall || playerOnRightWall)
                         {
                             // ? what do I do about jump on wall
-                            // if (jumpOnWallFuse)
-                            // {
-                            //     Speed.y = climbSpeed;
-                            //     Speed.x = (playerOnLeftWall ? 1 : -1) * maxAirborneSpeed;
-                            //     graphicsManager.ClimbJump();
-                            //     //TODO:speed.x depends on the control
-                            // }
-                            // else
-                            // {
-                            //     Speed.x = (playerOnLeftWall ? 1 : -1) * maxAirborneSpeed;
-                            // }
+                            Speed.y = climbSpeed;
+                            Speed.x = (playerOnLeftWall ? 1 : -1) * maxAirborneSpeed;
+                            // graphicsManager.ClimbJump();
+                            //TODO:speed.x depends on the control
                         }
                         else if (canDoubleJump)
                         {
