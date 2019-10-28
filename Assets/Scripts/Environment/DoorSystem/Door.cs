@@ -15,6 +15,7 @@ namespace Environment.DoorSystem
 
         public void Unlock()
         {
+            Debug.Log("unlocked !");
             unlocked = true;
         }
 
