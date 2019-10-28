@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 /// <summary>
 /// simple sensor
 /// </summary>
@@ -48,5 +49,10 @@ public class SensorOnOff : MonoBehaviour
             transform.lossyScale
             );
         Gizmos.color = Color.white;
+    }
+
+    internal void ResetState()
+    {
+        touchCount = 0;
     }
 }

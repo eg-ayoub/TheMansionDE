@@ -11,6 +11,7 @@ namespace Environment.Platforms
         {
             animator = GetComponent<Animator>();
         }
+
         public override void PlayerOff()
         {
             animator.SetTrigger("Vanish");
@@ -18,7 +19,7 @@ namespace Environment.Platforms
 
         public override void PlayerOn()
         {
-            // ! do nothing
+            GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
         }
 
         public void Vanish()

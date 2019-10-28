@@ -4,6 +4,8 @@ namespace Player
 {
     using Graphics;
     using Controls;
+    using System;
+
     namespace Movement
     {
         /// <summary>
@@ -282,6 +284,11 @@ namespace Player
                     playerPhysics.SetTargetSpeed(Speed);
                     playerWasOnGround = playerOnGround;
                 }
+            }
+
+            internal void ResetSensors()
+            {
+                sensor.ResetAll();
             }
 
             IEnumerator JumpTimeInOut()

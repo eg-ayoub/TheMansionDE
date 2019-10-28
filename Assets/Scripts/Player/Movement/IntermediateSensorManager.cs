@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 /// <summary>
 /// intermediate monobehaviour between an array of sensors and the collisionsensorscript
 /// </summary>
@@ -46,4 +47,11 @@ public class IntermediateSensorManager : GameplayObject
         }
     }
 
+    internal void ResetSensorArray()
+    {
+        foreach (SensorOnOff sensor in sensorArray)
+        {
+            sensor.ResetState();
+        }
+    }
 }

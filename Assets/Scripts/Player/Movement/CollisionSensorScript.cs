@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 namespace Player
 {
     namespace Movement
@@ -56,7 +57,6 @@ namespace Player
                 {
                     left = right = false;
                     up = down = false;
-
                 }
 
             }
@@ -104,6 +104,14 @@ namespace Player
             public void OnResumeGame()
             {
                 paused = false;
+            }
+
+            internal void ResetAll()
+            {
+                up.ResetSensorArray();
+                down.ResetSensorArray();
+                left.ResetSensorArray();
+                right.ResetSensorArray();
             }
         }
     }

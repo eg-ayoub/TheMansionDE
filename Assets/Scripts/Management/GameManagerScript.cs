@@ -150,8 +150,9 @@ namespace Management
             currentHandle = FindObjectOfType<LevelHandle>();
             yield return null;
 
-            // * 5 - put player in spawnpoint
+            // * 5 - put player in spawnpoint and reset sensors
             PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
+            PlayerInstanciationScript.movementModifier.ResetSensors();
             yield return null;
 
             // * 6 - play second part of loading animation (shows screen)
@@ -263,9 +264,11 @@ namespace Management
             currentHandle = FindObjectOfType<LevelHandle>();
             yield return null;
 
-            // * 5 - put player in spawnpoint
+            // * 5 - put player in spawnpoint and reset collisions
             PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
+            PlayerInstanciationScript.movementModifier.ResetSensors();
             yield return null;
+
 
             // * 6 - play second part of loading animation (shows screen)
             LoadingOverlay.overlay.Resume();
