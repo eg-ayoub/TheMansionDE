@@ -11,7 +11,7 @@ namespace Environment.Platforms
         {
             animator = GetComponent<Animator>();
         }
-        const float pinnacle = 1000.0f;
+        const float pinnacle = 3000.0f;
 
         public override void PlayerOff()
         {
