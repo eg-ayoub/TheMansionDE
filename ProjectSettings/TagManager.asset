@@ -7,6 +7,7 @@ TagManager:
   - env
   - Sensor
   - Enemy
+  - Crawler
   layers:
   - Default
   - TransparentFX

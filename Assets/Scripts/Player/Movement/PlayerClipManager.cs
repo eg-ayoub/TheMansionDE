@@ -72,7 +72,7 @@ namespace Player
                 YW -= PlayerRect.B.y;
                 HorizontalRayCount = Mathf.Clamp(HorizontalRayCount, 2, int.MaxValue);
                 VerticalRayCount = Mathf.Clamp(VerticalRayCount, 2, int.MaxValue);
-                paused = false;
+                // paused = false;
                 playerTransform = PlayerInstanciationScript.playerTransform;
             }
 

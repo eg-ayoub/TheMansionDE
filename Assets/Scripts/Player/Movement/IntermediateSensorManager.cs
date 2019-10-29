@@ -35,7 +35,7 @@ public class IntermediateSensorManager : GameplayObject
         on = false;
         for (int i = 0; i < ArraySize; i++)
         {
-            if (sensorArray[i].getState())
+            if (sensorArray[i].GetState())
             {
                 SensorsOn += 1;
             }
