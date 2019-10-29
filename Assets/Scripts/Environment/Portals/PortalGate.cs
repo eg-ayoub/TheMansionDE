@@ -17,6 +17,7 @@ namespace Environment.Portals
         {
             if (active && !paused && other.CompareTag("Player"))
             {
+                GetComponent<ParticleSystem>().Play();
                 wormHole.Warp(this);
             }
         }
