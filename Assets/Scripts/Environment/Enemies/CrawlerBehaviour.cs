@@ -43,25 +43,28 @@ namespace Environment.Enemies
 
         private void Update()
         {
-            animator.ResetTrigger("Fall");
-            animator.ResetTrigger("Crawl");
-            rectangle.Reset(box, skinWidth);
-            if (!groundSensor.GetState())
+            if (!paused)
             {
-                animator.SetTrigger("Fall");
-                speed += gravity * Time.deltaTime * Vector2.down;
-                speed.x = 0;
+                animator.ResetTrigger("Fall");
+                animator.ResetTrigger("Crawl");
+                rectangle.Reset(box, skinWidth);
+                if (!groundSensor.GetState())
+                {
+                    animator.SetTrigger("Fall");
+                    speed += gravity * Time.deltaTime * Vector2.down;
+                    speed.x = 0;
+                }
+                else
+                {
+                    animator.SetTrigger("Crawl");
+                    speed.y = 0;
+                    speed.x = ((int)direction) * crawlSpeed;
+                }
+                deltaPosition = speed * Time.deltaTime;
+                HorizontalMove();
+                VerticalMove();
+                transform.Translate(deltaPosition);
             }
-            else
-            {
-                animator.SetTrigger("Crawl");
-                speed.y = 0;
-                speed.x = ((int)direction) * crawlSpeed;
-            }
-            deltaPosition = speed * Time.deltaTime;
-            HorizontalMove();
-            VerticalMove();
-            transform.Translate(deltaPosition);
         }
 
         private void VerticalMove()
