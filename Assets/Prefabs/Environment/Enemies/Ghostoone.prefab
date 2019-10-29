@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8942563431840423797}
   - component: {fileID: 8942563431840423796}
   - component: {fileID: 8942563431840423799}
+  - component: {fileID: 6647750227987433781}
   m_Layer: 13
   m_Name: Ghostoone
   m_TagString: Enemy
@@ -61,7 +62,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 100
+  m_Radius: 369.9
 --- !u!212 &8942563431840423799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5653079856460303841, guid: 9252be66f58e4712296abc0a071c73d9,
+  m_Sprite: {fileID: -9196448948383446999, guid: 54324de1f607957deafcff3404b69b80,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -113,3 +114,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6647750227987433781
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8942563431840423787}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4984e160371567b294d6425fa3a0ac0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

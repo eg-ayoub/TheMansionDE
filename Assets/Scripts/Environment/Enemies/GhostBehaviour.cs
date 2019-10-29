@@ -72,6 +72,9 @@ namespace Environment.Enemies
                 Vector3 deltaPosition = 1 / tau * (target - transform.position) * Time.deltaTime;
                 deltaPosition.z = 0;
 
+                if (deltaPosition.x > 0) transform.localScale = new Vector3(-1, 1, 1);
+                else transform.localScale = new Vector3(1, 1, 1);
+
                 transform.Translate(deltaPosition);
             }
         }
