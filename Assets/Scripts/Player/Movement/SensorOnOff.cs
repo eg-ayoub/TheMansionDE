@@ -33,7 +33,7 @@ public class SensorOnOff : MonoBehaviour
         }
     }
 
-    public bool getState()
+    public bool GetState()
     {
         return touchCount != 0;
     }
@@ -43,7 +43,7 @@ public class SensorOnOff : MonoBehaviour
     /// </summary>
     void OnDrawGizmos()
     {
-        Gizmos.color = getState() ? new Color(1, 0, 0, .5f) : new Color(0, 1, 0, .5f);
+        Gizmos.color = GetState() ? new Color(1, 0, 0, .5f) : new Color(0, 1, 0, .5f);
         Gizmos.DrawCube(
             transform.position,
             transform.lossyScale
