@@ -2,7 +2,7 @@ using UnityEngine;
 using Player.Health;
 using Player;
 
-namespace Environment
+namespace Environment.Hazards
 {
     public class DeadZone : MonoBehaviour
     {
