@@ -22,17 +22,18 @@ namespace Player.Health
         // Update is called once per frame
         public void TakeDamage()
         {
+            if (HP == 1)
+            {
+                GameManagerScript.gameManager.ReturnToMain();
+            }
+            else
+            {
+                HP -= 1;
+                GameManagerScript.gameManager.RestartLevel();
+            }
+
             if (!paused)
             {
-                if (HP == 1)
-                {
-                    GameManagerScript.gameManager.ReturnToMain();
-                }
-                else
-                {
-                    HP -= 1;
-                    GameManagerScript.gameManager.RestartLevel();
-                }
                 HudScript.hud.UpdateHP(HP);
             }
         }

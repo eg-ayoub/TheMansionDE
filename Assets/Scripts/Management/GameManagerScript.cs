@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 using Player;
 using UI.Loading;
 using UI.HUD;
+using UI.PauseMenu;
 namespace Management
 {
+    using System;
     using Serialization;
     /// <summary>
     /// Game Manager is a singleton class that manages all aspects of the game.
@@ -54,6 +56,13 @@ namespace Management
                 Destroy(gameObject);
             }
         }
+
+        internal void LeaveGame()
+        {
+            // what do we do before leaving game ?
+            Application.Quit();
+        }
+
         void Start()
         {
             if (gameManager == this)
@@ -72,6 +81,8 @@ namespace Management
             if (KeyMapper.GetButtonDown("Pause"))
             {
                 ToggleGamePaused();
+                if (paused) PauseMenu.menu.Show();
+                else PauseMenu.menu.Hide();
             }
         }
 
@@ -180,6 +191,8 @@ namespace Management
             // * 9 - set HUD to levelMode
             HudScript.hud.ExitHub();
             timer.StartTimer();
+            PlayerInstanciationScript.movementModifier.ResetSensors();
+
         }
 
         IEnumerator HubReturn()
@@ -196,6 +209,8 @@ namespace Management
                 yield return null;
             }
 
+            LoadingOverlay.overlay.DisplayGameOver();
+
             // * 3 - wait for scene to load
             AsyncOperation levelLoad = SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
             while (!levelLoad.isDone)
@@ -209,11 +224,15 @@ namespace Management
 
             // * 5 - put player in spawnpoint
             PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
+            PlayerInstanciationScript.movementModifier.ResetSensors();
             yield return null;
 
             // * 5b - reset player HP
             PlayerInstanciationScript.hpManager.SetHP(Constants.PLAYER_START_HP);
 
+            // * 5c - delay
+            yield return new WaitForSeconds(5f);
+            LoadingOverlay.overlay.RemoveIndicators();
             // * 6 - play second part of loading animation (shows screen)
             LoadingOverlay.overlay.Resume();
             while (!LoadingOverlay.overlay.isDone)
@@ -237,6 +256,8 @@ namespace Management
             PlayerInstanciationScript.clipManager.UnFreeze();
             // // * stop timer (we don't need it in hubworld)
             // timer.StopTimer();
+            PlayerInstanciationScript.movementModifier.ResetSensors();
+
         }
 
         IEnumerator LevelRestart()
@@ -283,6 +304,10 @@ namespace Management
             ToggleGamePaused();
             yield return null;
 
+            // * 7b set some UI stuff
+            HudScript.hud.UpdateKeyStatus(false);
+            HudScript.hud.UpdateLevel(currentHandle.buildIndex);
+
             // * 8 - freeze player and reset controls for 10 frames
             PlayerInstanciationScript.clipManager.Freeze();
             for (int _ = 0; _ < 10; _++)
@@ -291,6 +316,8 @@ namespace Management
                 yield return null;
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
+            PlayerInstanciationScript.movementModifier.ResetSensors();
+
         }
 
         IEnumerator NextLevel()
@@ -310,6 +337,9 @@ namespace Management
             {
                 yield return null;
             }
+
+            if (currentHandle.checkpoint != 0)
+                LoadingOverlay.overlay.DisplayWin();
 
             // * 3a - which scene do I load ?
             int nextLevel = currentHandle.checkpoint != 0 ? 0 : currentHandle.buildIndex + 1;
@@ -334,11 +364,16 @@ namespace Management
 
             // * 5 - put player in spawnpoint
             PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
+            PlayerInstanciationScript.movementModifier.ResetSensors();
+
             yield return null;
 
             // * 5b - reset player HP if returning to hub
             if (nextLevel == 0)
                 PlayerInstanciationScript.hpManager.SetHP(Constants.PLAYER_START_HP);
+
+            yield return new WaitForSeconds(2f);
+            LoadingOverlay.overlay.RemoveIndicators();
 
             // * 6 - play second part of loading animation (shows screen)
             LoadingOverlay.overlay.Resume();
@@ -365,6 +400,7 @@ namespace Management
                 yield return null;
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
+            PlayerInstanciationScript.movementModifier.ResetSensors();
         }
 
     }

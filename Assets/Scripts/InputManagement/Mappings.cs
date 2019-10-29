@@ -15,7 +15,8 @@ namespace InputManagement
         };
         public static AxisMap[] kbAxes = new AxisMap[KeyMapper.AXIS_COUNT]{
             new AxisMap("KBH"),
-        };
+            new AxisMap("KBV")
+    };
 
         /*
          * XBOX ONE CONTROLLER MAPPING INFO 
@@ -82,6 +83,7 @@ namespace InputManagement
         /// </summary>
         public static AxisMap[] XBoxAxes = new AxisMap[KeyMapper.AXIS_COUNT]{
             XBoxOneAllAxes["LSH"],
+            XBoxOneAllAxes["LSV"]
         };
 
         /// <summary>
@@ -142,6 +144,7 @@ namespace InputManagement
         /// </summary>
         public static AxisMap[] DS4Axes = new AxisMap[KeyMapper.AXIS_COUNT]{
             DS4AllAxes["LSH"],
+            DS4AllAxes["LSV"]
         };
 
         public static void UpdaterSetup(AxisButtonUpdater updater)

@@ -5,6 +5,7 @@ namespace Environment.Hazards
 {
     public class DamageStream : GameplayObject
     {
+        public float startDelaySeconds;
         public LayerMask layerMask;
         const float delay = 2f;
         ParticleSystem particles;
@@ -12,6 +13,12 @@ namespace Environment.Hazards
         private void Start()
         {
             particles = GetComponent<ParticleSystem>();
+            StartCoroutine(InitLoop());
+        }
+
+        IEnumerator InitLoop()
+        {
+            yield return new WaitForSeconds(startDelaySeconds);
             StartCoroutine(Loop());
         }
 
@@ -20,9 +27,6 @@ namespace Environment.Hazards
             while (true)
             {
 
-                // Debug.DrawRay(150 * transform.up + transform.position, 1000 * transform.right, Color.magenta, delay);
-                // Debug.DrawRay(transform.position, 1000 * transform.right, Color.magenta, delay);
-                // Debug.DrawRay(-150 * transform.up + transform.position, 1000 * transform.right, Color.magenta, delay);
                 yield return new WaitForSeconds(delay);
 
                 particles.Play();

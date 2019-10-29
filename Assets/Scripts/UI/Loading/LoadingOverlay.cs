@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.Loading
 {
@@ -20,6 +22,10 @@ namespace UI.Loading
         public bool isDone;
         ANIMATIONS clip;
         Animator animator;
+        Text overlayMessage;
+        Image overlayMessageDesc;
+        public Sprite deathSprite;
+        public Sprite winSprite;
 
         private void Awake()
         {
@@ -36,18 +42,18 @@ namespace UI.Loading
         private void Start()
         {
             animator = GetComponent<Animator>();
+            overlayMessage = GetComponentInChildren<Text>();
+            overlayMessageDesc = transform.GetChild(6).GetComponent<Image>();
+            RemoveIndicators();
         }
         public void Play(ANIMATIONS animation)
         {
             switch (animation)
             {
                 case ANIMATIONS.RESTART:
-                    clip = animation;
-                    animator.SetTrigger("Restart");
-                    break;
                 case ANIMATIONS.GAME_OVER:
                     clip = animation;
-                    animator.SetTrigger("Checkpoint");
+                    animator.SetTrigger("Restart");
                     break;
                 case ANIMATIONS.LEVEL_ENTRY:
                 case ANIMATIONS.NEXT_LEVEL:
@@ -89,5 +95,27 @@ namespace UI.Loading
             }
         }
 
+        internal void DisplayWin()
+        {
+            overlayMessageDesc.sprite = winSprite;
+            overlayMessageDesc.color = Color.white;
+        }
+
+        internal void DisplayGameOver()
+        {
+            overlayMessage.text = "GAME OVER";
+            overlayMessage.color = Color.white;
+
+            overlayMessageDesc.sprite = deathSprite;
+            overlayMessageDesc.color = Color.white;
+        }
+
+        internal void RemoveIndicators()
+        {
+            overlayMessage.color = Color.clear;
+            overlayMessageDesc.color = Color.clear;
+        }
+
+        // internal void DisplayLevel()
     }
 }

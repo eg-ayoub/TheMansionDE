@@ -9,7 +9,7 @@ namespace InputManagement
     public class KeyMapper
     {
         public const int BUTTON_COUNT = 3;
-        public const int AXIS_COUNT = 1;
+        public const int AXIS_COUNT = 2;
         /// <summary>
         /// key map
         /// </summary>
@@ -31,7 +31,8 @@ namespace InputManagement
         /// game's axes
         /// </summary>
         static string[] axes = new string[AXIS_COUNT]{
-            "Horizontal"
+            "Horizontal",
+            "Vertical"
         };
 
         /// <summary>
