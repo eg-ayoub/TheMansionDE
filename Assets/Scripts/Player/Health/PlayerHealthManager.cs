@@ -28,7 +28,7 @@ namespace Player.Health
             }
             else
             {
-                HP -= 1;
+                //HP -= 1;
                 GameManagerScript.gameManager.RestartLevel();
             }
 
