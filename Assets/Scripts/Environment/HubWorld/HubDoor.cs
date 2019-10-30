@@ -2,15 +2,18 @@ using UnityEngine;
 using InputManagement;
 using Management;
 using UnityEngine.Experimental.Rendering.Universal;
+using Player;
 
 namespace Environment.HubWorld
 {
     public class HubDoor : GameplayObject
     {
+
         public Sprite accessibleSprite;
         public Sprite inaccessibleSprite;
         public Sprite finishedSprite;
         SpriteRenderer sprite;
+        SpriteRenderer indicator;
         Light2D mLight;
 
 
@@ -26,6 +29,7 @@ namespace Environment.HubWorld
         {
             sprite = GetComponent<SpriteRenderer>();
             mLight = GetComponent<Light2D>();
+            indicator = transform.GetChild(0).GetComponentInChildren<SpriteRenderer>();
         }
 
         public void Init()
@@ -44,6 +48,21 @@ namespace Environment.HubWorld
                 mLight.enabled = false;
             }
 
+        }
+        private void Update()
+        {
+            if (accessible)
+            {
+                float distance = transform.position.x - PlayerInstanciationScript.playerTransform.position.x;
+                distance = Mathf.Abs(distance);
+                distance = Mathf.Clamp(distance, 100, 1000);
+                distance = Mathf.InverseLerp(100, 1000, distance);
+                indicator.color = new Color(1, 1, 1, 1 - distance);
+            }
+            else
+            {
+                indicator.color = Color.clear;
+            }
         }
 
         private void OnTriggerStay2D(Collider2D other)
