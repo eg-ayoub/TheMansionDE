@@ -45,7 +45,7 @@ EditorBuildSettings:
     path: Assets/Scenes/levels/Normal/Level12.unity
     guid: b06abddeb318448e7a2e3c82d97878d8
   - enabled: 1
-    path: Assets/Scenes/levels/Normal/Level13.unity
+    path: Assets/Scenes/levels/MansionOfMadness/Level13.unity
     guid: 3b1038926442a425e8b804a568f303be
   - enabled: 1
     path: Assets/Scenes/levels/Normal/Level14.unity
