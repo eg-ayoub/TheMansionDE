@@ -58,7 +58,8 @@ namespace Player
             /// <param name="dir"> location from which we cast ray</param>
             void Cast(ref float angle, bool dir)
             {
-                RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + new Vector2((dir ? -1 : 1) * 6, 5), -Vector2.up, 100, layerMask);
+                // Debug.DrawRay(transform.position + new Vector3((dir ? -1 : 1) * 100, 5, 0), -1000 * Vector3.up);
+                RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + new Vector2((dir ? -1 : 1) * 75, 5), -Vector2.up, 500, layerMask);
                 if (hit)
                 {
                     angle = Vector2.SignedAngle(Vector2.up, hit.normal);

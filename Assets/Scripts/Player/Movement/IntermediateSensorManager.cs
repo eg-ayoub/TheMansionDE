@@ -29,7 +29,7 @@ public class IntermediateSensorManager : GameplayObject
     /// <summary>
     /// if more than half the sensors are on, we assume there is a collision
     /// </summary>
-    void Update()
+    void FixedUpdate()
     {
         SensorsOn = 0;
         on = false;

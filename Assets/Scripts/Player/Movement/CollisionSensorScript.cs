@@ -73,7 +73,7 @@ namespace Player
             /// <summary>
             /// Update is called every frame, if the MonoBehaviour is enabled.
             /// </summary>
-            private void Update()
+            private void FixedUpdate()
             {
                 if (!paused)
                 {

@@ -7,6 +7,9 @@ namespace Player.Controls
     /// </summary>
     public class PlayerControllerScript : GameplayObject
     {
+        public bool jumpButtonDown;
+        public bool jumpButtonUp;
+        public float horizontal;
         /// <summary>
         /// player's movement modifier we send movement controls to
         /// </summary>
@@ -28,19 +31,32 @@ namespace Player.Controls
         {
             if (!paused)
             {
+                FetchOneTimeControls();
+                FetchControls();
+            }
+        }
+        /// <summary>
+        ///! this is only for one time controls IE buttonUP buttonDOWN
+        /// </summary>
+        void FetchOneTimeControls()
+        {
+            if (KeyMapper.GetButtonDown("Jump")) jumpButtonDown = true;
+            if (KeyMapper.GetButtonUp("Jump")) jumpButtonUp = true;
+        }
 
-                movementModifier.SetControls(
-                    KeyMapper.GetButtonUp("Jump"),
-                    KeyMapper.GetButtonDown("Jump"),
-                    KeyMapper.GetAxis("Horizontal")
-                );
-
-                PlayerInstanciationScript.player.direction
-                    = KeyMapper.GetAxis("Horizontal") > 0
+        void FetchControls()
+        {
+            horizontal = KeyMapper.GetAxis("Horizontal");
+            PlayerInstanciationScript.player.direction
+                    = horizontal > 0
                     ? DIRECTION.RIGHT
                     : DIRECTION.LEFT;
+        }
 
-            }
+        public void ResetOneTimeControls()
+        {
+            jumpButtonDown = false;
+            jumpButtonUp = false;
         }
 
     }

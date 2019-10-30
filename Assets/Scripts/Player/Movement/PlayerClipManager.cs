@@ -12,6 +12,7 @@ namespace Player
         /// </summary>
         public class PlayerClipManager : GameplayObject
         {
+            PlayerPhysics playerPhysics;
             /// <summary>
             /// translation value for this scene
             /// </summary>
@@ -74,11 +75,12 @@ namespace Player
                 VerticalRayCount = Mathf.Clamp(VerticalRayCount, 2, int.MaxValue);
                 // paused = false;
                 playerTransform = PlayerInstanciationScript.playerTransform;
+                playerPhysics = PlayerInstanciationScript.player.GetComponentInChildren<PlayerPhysics>();
             }
 
 
 
-            void Update()
+            void FixedUpdate()
             {
                 if (!paused)
                 {
@@ -87,6 +89,7 @@ namespace Player
                     HorizontalMove(ref deltaPosition);
                     if (!frozen)
                     {
+                        playerPhysics.SetRealDeltaPosition(deltaPosition);
                         playerTransform.Translate(deltaPosition);
                     }
                 }

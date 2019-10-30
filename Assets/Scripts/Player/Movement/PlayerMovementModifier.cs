@@ -13,7 +13,7 @@ namespace Player
         /// </summary>
         public class PlayerMovementModifier : GameplayObject
         {
-
+            PlayerControllerScript playerController;
             /// <summary>
             /// normal vector of the ground under the player
             /// </summary>
@@ -44,23 +44,15 @@ namespace Player
             /// </summary>
             bool jumpTimingIn;
             /// <summary>
-            /// jump control
-            /// </summary>
-            [HideInInspector] public bool jumpButtonDown, jumpButtonUp;
-            /// <summary>
-            /// joystick 
-            /// </summary>
-            float horizontal;
-            /// <summary>
             /// double jump state : false if the player has just used doublejump
             /// </summary>
             bool canDoubleJump;
             /// <summary>
-            /// max horizontal speed when player is running
+            /// max playerController.horizontal speed when player is running
             /// </summary>
             [SerializeField, Header("Running constants")] float maxRunSpeed;
             /// <summary>
-            /// max horizontal speed when player is airborne
+            /// max playerController.horizontal speed when player is airborne
             /// </summary>
             float maxAirborneSpeed;
             /// <summary>
@@ -118,6 +110,7 @@ namespace Player
             {
                 sensor = GetComponentInChildren<CollisionSensorScript>();
                 playerPhysics = GetComponent<PlayerPhysics>();
+                playerController = PlayerInstanciationScript.playerController;
                 graphicsManager = PlayerInstanciationScript.graphicsManager;
                 groundVector = Vector2.right;
                 playerPhysics.SetGravity((8 * jumpHeight) / (jumpTime * jumpTime));
@@ -133,27 +126,12 @@ namespace Player
             /// setter for player's speed
             /// </summary>
             /// <param name="TS">new speed</param>
-            public void SetSpeed(Vector2 TS)
+            public void SetRealSpeed(Vector2 TS)
             {
                 Speed = TS;
             }
 
-
-            /// <summary>
-            /// gets controls from playercontroller
-            /// </summary>
-            /// <param name="JUP">jump button up</param>
-            /// <param name="JDOWN">jump button up</param>
-            /// <param name="h">horizontal stick axis</param>
-            /// <param name="v">vertical stick axis</param>
-            public void SetControls(bool JUP, bool JDOWN, float h)
-            {
-                jumpButtonUp = JUP;
-                jumpButtonDown = JDOWN;
-                horizontal = h;
-            }
-
-            private void Update()
+            private void FixedUpdate()
             {
                 if (!paused)
                 {
@@ -165,7 +143,7 @@ namespace Player
 
                     if (!(playerOnRightWall || playerOnLeftWall) || playerOnGround)
                     {
-                        graphicsManager.SetRunBlend(horizontal);
+                        graphicsManager.SetRunBlend(playerController.horizontal);
                     }
 
                     if (playerOnGround)
@@ -175,7 +153,7 @@ namespace Player
                         canDoubleJump = true;
                     }
 
-                    if (Mathf.Abs(horizontal) <= 10E-2)
+                    if (Mathf.Abs(playerController.horizontal) <= 10E-2)
                     {
                         if (playerOnGround)
                         {
@@ -199,18 +177,18 @@ namespace Player
                     {
                         if (playerOnGround)
                         {
-                            Speed = horizontal * maxRunSpeed * groundVector;
+                            Speed = playerController.horizontal * maxRunSpeed * groundVector;
                         }
                         else
                         {
-                            Speed.x = horizontal * maxAirborneSpeed;
+                            Speed.x = playerController.horizontal * maxAirborneSpeed;
                         }
 
                     }
                     else if (playerOnGround)
                     {
                         canDoubleJump = true;
-                        Speed = horizontal * maxRunSpeed * groundVector;
+                        Speed = playerController.horizontal * maxRunSpeed * groundVector;
                     }
                     else
                     {
@@ -218,7 +196,7 @@ namespace Player
 
                     }
 
-                    if (jumpButtonDown)
+                    if (playerController.jumpButtonDown)
                     {
                         if (playerOnGround || jumpTimingIn)
                         {
@@ -246,7 +224,7 @@ namespace Player
 
                     }
 
-                    if (jumpButtonUp && Speed.y > 0 && !playerOnGround)
+                    if (playerController.jumpButtonUp && Speed.y > 0 && !playerOnGround)
                     {
                         Speed.y = 0;
                     }
@@ -283,6 +261,7 @@ namespace Player
 
                     playerPhysics.SetTargetSpeed(Speed);
                     playerWasOnGround = playerOnGround;
+                    playerController.ResetOneTimeControls();
                 }
             }
 

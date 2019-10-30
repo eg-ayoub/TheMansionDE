@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 namespace Player.Movement
 {
@@ -52,7 +53,7 @@ namespace Player.Movement
             paused = false;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (!paused)
             {
@@ -61,7 +62,7 @@ namespace Player.Movement
                     targetSpeed -= gravity * Time.fixedDeltaTime * Vector2.up;
                 }
                 ClampSpeed(maxSpeedX, maxSpeedY);
-                movementModifier.SetSpeed(targetSpeed);
+                // movementModifier.SetSpeed(targetSpeed);
                 deltaPosition = targetSpeed * Time.fixedDeltaTime;
                 clipManager.SetDeltaPosition(deltaPosition);
                 if (deltaPosition.magnitude >= .5f)
@@ -91,6 +92,13 @@ namespace Player.Movement
         public void SetTargetSpeed(Vector2 speed)
         {
             targetSpeed = speed;
+        }
+
+        internal void SetRealDeltaPosition(Vector2 deltaPosition)
+        {
+            this.deltaPosition = deltaPosition;
+            targetSpeed = deltaPosition / Time.fixedDeltaTime;
+            movementModifier.SetRealSpeed(targetSpeed);
         }
 
         /// <summary>
