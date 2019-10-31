@@ -13,8 +13,8 @@ namespace Environment.HubWorld
 
         private void Start()
         {
-            StartCoroutine(Decorate());
             uIDecoration = FindObjectOfType<HubWorldUIDecoration>();
+            StartCoroutine(Decorate());
         }
 
         IEnumerator Decorate()

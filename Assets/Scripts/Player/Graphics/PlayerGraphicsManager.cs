@@ -10,6 +10,7 @@ namespace Player
         /// </summary>
         public class PlayerGraphicsManager : GameplayObject
         {
+            ParticleSystem runParticles;
             /// <summary>
             /// animator component that switches between animations
             /// </summary>
@@ -17,6 +18,7 @@ namespace Player
             private void Start()
             {
                 animator = GetComponent<Animator>();
+                runParticles = transform.GetChild(0).GetComponent<ParticleSystem>();
             }
             /// <summary>
             /// sets the runblend for interpolation between run and idle anim
@@ -91,6 +93,8 @@ namespace Player
             {
                 if (!paused)
                 {
+                    runParticles.Pause();
+                    runParticles.Clear();
                     ResetTriggers();
                     animator.SetTrigger("jump");
                 }
@@ -100,6 +104,8 @@ namespace Player
             {
                 if (!paused)
                 {
+                    runParticles.Pause();
+                    runParticles.Clear();
                     Jump();
                     // ! replace me
                 }
@@ -122,6 +128,8 @@ namespace Player
             {
                 if (!paused)
                 {
+                    runParticles.Pause();
+                    runParticles.Clear();
                     ResetTriggers();
                     animator.SetTrigger("fall");
                 }
@@ -155,6 +163,15 @@ namespace Player
             {
                 animator.speed = 1;
                 base.OnResumeGame();
+            }
+
+            public void CreateDustOnLand()
+            {
+                Debug.Log("land !");
+                GameObject effect = Instantiate(Resources.Load("Effects/Player/GroundHitParticles")) as GameObject;
+                effect.transform.position = transform.position - 100 * Vector3.up;
+                Destroy(effect, 2f);
+                runParticles.Play();
             }
         }
     }

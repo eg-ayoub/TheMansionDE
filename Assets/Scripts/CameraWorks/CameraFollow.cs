@@ -8,7 +8,7 @@ namespace CameraWorks
 
         private void Start()
         {
-            playerOffset = -PlayerInstanciationScript.playerTransform.position.x + transform.position.x;
+            playerOffset = 3000;
         }
 
         private void Update()

@@ -10,7 +10,7 @@ namespace Environment.DoorSystem
         public Sprite closedSprite;
         private Key key;
         private bool unlocked;
-        Collectible collectible;
+        bool hasCollectible;
 
         private void Start()
         {
@@ -29,7 +29,8 @@ namespace Environment.DoorSystem
         {
             if (unlocked && other.CompareTag("Player") && !paused)
             {
-                if (collectible != null)
+                unlocked = false;
+                if (hasCollectible)
                 {
                     GameManagerScript.gameManager.IncrementCollectibles();
                 }
@@ -37,9 +38,9 @@ namespace Environment.DoorSystem
             }
         }
 
-        public void AddCollectible(Collectible collectible)
+        public void AddCollectible()
         {
-            this.collectible = collectible;
+            this.hasCollectible = true;
         }
     }
 }

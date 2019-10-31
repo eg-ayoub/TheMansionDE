@@ -4,11 +4,12 @@ namespace Environment.Collectibles
 {
     public class Collectible : MonoBehaviour
     {
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
-                GetComponentInParent<Door>().AddCollectible(this);
+                FindObjectOfType<Door>().AddCollectible();
+                Destroy(gameObject);
             }
         }
     }

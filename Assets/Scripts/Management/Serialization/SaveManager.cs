@@ -28,7 +28,7 @@ namespace Management.Serialization
             int index = (int)check - 1;
             // * set new time to save
             if (time < blob.SaveTimes[index] || blob.SaveTimes[index] == -1) blob.SaveTimes[index] = time;
-            if (collectibles > blob.SaveCollectibles[index]) blob.SaveCollectibles[(int)check] = collectibles;
+            if (collectibles > blob.SaveCollectibles[index]) blob.SaveCollectibles[index] = collectibles;
 
             // * write to save file
             fs = File.Create(savepath);
