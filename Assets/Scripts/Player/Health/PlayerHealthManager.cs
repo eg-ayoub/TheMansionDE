@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UI.HUD;
 using Management;
+using System.Collections;
 namespace Player.Health
 {
     // using State;
@@ -10,6 +11,7 @@ namespace Player.Health
     /// </summary>
     public class PlayerHealthManager : GameplayObject
     {
+        bool immune;
         /// <summary>
         /// current HP value
         /// </summary>
@@ -22,20 +24,34 @@ namespace Player.Health
         // Update is called once per frame
         public void TakeDamage()
         {
-            if (HP == 1)
+            if (!immune)
             {
-                GameManagerScript.gameManager.ReturnToMain();
+                immune = true;
+                if (HP == 1)
+                {
+                    GameManagerScript.gameManager.ReturnToMain();
+                }
+                else
+                {
+                    HP -= 1;
+                    if (!paused)
+                    {
+                        HudScript.hud.UpdateHP(HP);
+                    }
+                    GameManagerScript.gameManager.RestartLevel();
+                }
+                StartCoroutine(ResetImmunity());
             }
-            else
-            {
-                HP -= 1;
-                GameManagerScript.gameManager.RestartLevel();
-            }
+        }
 
-            if (!paused)
+        IEnumerator ResetImmunity()
+        {
+            for (int i = 0; i < 10; i++)
             {
-                HudScript.hud.UpdateHP(HP);
+                yield return null;
             }
+            immune = false;
+            yield return null;
         }
         /// <summary>
         /// restores 'health' amount of points to player's HP

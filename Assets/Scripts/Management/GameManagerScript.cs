@@ -15,7 +15,7 @@ namespace Management
     /// </summary>
     public class GameManagerScript : MonoBehaviour
     {
-
+        bool isLoading;
         /// <summary>
         /// game manager singleton
         /// </summary>
@@ -125,22 +125,38 @@ namespace Management
 
         public void ReturnToMain()
         {
-            StartCoroutine(HubReturn());
+            if (!isLoading)
+            {
+                StartCoroutine(HubReturn());
+                isLoading = true;
+            }
         }
 
         public void RestartLevel()
         {
-            StartCoroutine(LevelRestart());
+            if (!isLoading)
+            {
+                StartCoroutine(LevelRestart());
+                isLoading = true;
+            }
         }
 
         public void Enter(int target)
         {
-            StartCoroutine(EnterLevel(target));
+            if (!isLoading)
+            {
+                StartCoroutine(EnterLevel(target));
+                isLoading = true;
+            }
         }
 
         public void Next()
         {
-            StartCoroutine(NextLevel());
+            if (!isLoading)
+            {
+                StartCoroutine(NextLevel());
+                isLoading = true;
+            }
         }
 
         IEnumerator EnterLevel(int index)
@@ -199,7 +215,7 @@ namespace Management
             HudScript.hud.ExitHub();
             timer.StartTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
-
+            isLoading = false;
         }
 
         IEnumerator HubReturn()
@@ -267,6 +283,7 @@ namespace Management
             // // * stop timer (we don't need it in hubworld)
             // timer.StopTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            isLoading = false;
 
         }
 
@@ -327,6 +344,7 @@ namespace Management
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            isLoading = false;
 
         }
 
@@ -412,6 +430,8 @@ namespace Management
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            isLoading = false;
+
         }
 
     }
