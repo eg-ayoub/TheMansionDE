@@ -8,7 +8,7 @@ namespace UI.HUD
         const int TICKS_IN_SECOND = 1000;
         const int SECONDS_IN_MINUTE = 60;
         const int MINUTES_IN_HOUR = 60;
-        private const string Format = "{0}{1:D2}:{2:D2}.{3:D3}";
+        private const string Format = "{0}{1:D2}:{2:D2}.{3:D2}";
         Text text;
 
         private void Start()
@@ -22,6 +22,12 @@ namespace UI.HUD
         /// <param name="time">the number of milliseconds that have passed since the beginning of the level</param>
         public void SetTime(int time)
         {
+
+            text.text = HumanTime(time);
+        }
+
+        public static string HumanTime(int time)
+        {
             int milliseconds = time % TICKS_IN_SECOND;
             time = time / TICKS_IN_SECOND; // number of seconds elapsed
             int seconds = time % SECONDS_IN_MINUTE;
@@ -30,8 +36,7 @@ namespace UI.HUD
             time = time / MINUTES_IN_HOUR; // number of hours elapsed
             int hours = time;
 
-            string display = string.Format(Format, hours != 0 ? hours + ":" : "", minutes, seconds, milliseconds);
-            text.text = display;
+            return string.Format(Format, hours != 0 ? hours + ":" : "", minutes, seconds, milliseconds);
         }
     }
 }

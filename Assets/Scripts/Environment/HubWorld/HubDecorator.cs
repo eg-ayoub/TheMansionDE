@@ -2,21 +2,42 @@ using UnityEngine;
 using System.Collections;
 using Management.Serialization;
 using UI.HUD;
+using UI.HubWorld;
 
 namespace Environment.HubWorld
 {
     public class HubDecorator : MonoBehaviour
     {
+
+        HubWorldUIDecoration uIDecoration;
+
         private void Start()
         {
             StartCoroutine(Decorate());
+            uIDecoration = FindObjectOfType<HubWorldUIDecoration>();
         }
 
         IEnumerator Decorate()
         {
             // * get times
-            int[] times = SaveManager.FetchTimes();
+            SaveBlob blob = SaveManager.FetchTimes();
+            int[] times = blob.SaveTimes;
+            int[] collectibles = blob.SaveCollectibles;
             yield return null;
+
+            // * decorate UI under doors
+
+            for (int i = 0; i < times.Length; i++)
+            {
+                if (times[i] != -1)
+                {
+                    uIDecoration.DecorateDoor(i, times[i], collectibles[i]);
+                }
+                else
+                {
+                    uIDecoration.RemoveDecoration(i);
+                }
+            }
 
             // * decorate doors
             bool first = true;

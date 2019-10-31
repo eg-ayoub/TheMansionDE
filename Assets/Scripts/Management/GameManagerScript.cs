@@ -36,6 +36,13 @@ namespace Management
         // ? persistence
         LevelHandle currentHandle;
 
+        int collectiblesInRun;
+
+        internal void IncrementCollectibles()
+        {
+            collectiblesInRun++;
+        }
+
         Timer timer;
 
         SaveManager saveManager;
@@ -230,6 +237,9 @@ namespace Management
             // * 5b - reset player HP
             PlayerInstanciationScript.hpManager.SetHP(Constants.PLAYER_START_HP);
 
+            // * reset collectibles
+            collectiblesInRun = 0;
+
             // * 5c - delay
             yield return new WaitForSeconds(5f);
             LoadingOverlay.overlay.RemoveIndicators();
@@ -348,7 +358,8 @@ namespace Management
             if (currentHandle.checkpoint != 0)
             {
                 int time = timer.GetTime();
-                yield return StartCoroutine(saveManager.SaveCoroutine(currentHandle.checkpoint, timer.GetTime()));
+                yield return StartCoroutine(saveManager.SaveCoroutine(currentHandle.checkpoint, timer.GetTime(), collectiblesInRun));
+                collectiblesInRun = 0;
             }
 
             // * 3c - wait for scene to load

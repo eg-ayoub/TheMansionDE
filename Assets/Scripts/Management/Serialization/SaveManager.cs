@@ -7,9 +7,14 @@ namespace Management.Serialization
 {
     public class SaveManager : MonoBehaviour
     {
-        static string savepath = Application.persistentDataPath + "/save.gd";
+        static string savepath;
 
-        public IEnumerator SaveCoroutine(CHECKPOINTS check, int time)
+        private void Start()
+        {
+            savepath = Application.persistentDataPath + "/save.gd";
+        }
+
+        public IEnumerator SaveCoroutine(CHECKPOINTS check, int time, int collectibles)
         {
             // * get old save
             yield return StartCoroutine(CheckFileAndCreate());
@@ -20,8 +25,10 @@ namespace Management.Serialization
             fs.Close();
             yield return null;
 
+            int index = (int)check - 1;
             // * set new time to save
-            blob.SaveTimes[(int)check - 1] = time;
+            if (time < blob.SaveTimes[index] || blob.SaveTimes[index] == -1) blob.SaveTimes[index] = time;
+            if (collectibles > blob.SaveCollectibles[index]) blob.SaveCollectibles[(int)check] = collectibles;
 
             // * write to save file
             fs = File.Create(savepath);
@@ -44,6 +51,10 @@ namespace Management.Serialization
                 {
                     blob.SaveTimes[_] = -1;
                 }
+                for (int _ = 0; _ < Constants.CHECKPOINT_COUNT; _++)
+                {
+                    blob.SaveCollectibles[_] = 0;
+                }
                 bf.Serialize(fs, blob);
                 fs.Close();
             }
@@ -55,7 +66,7 @@ namespace Management.Serialization
             return !File.Exists(savepath);
         }
 
-        public static int[] FetchTimes()
+        public static SaveBlob FetchTimes()
         {
             FileStream fs;
             BinaryFormatter bf = new BinaryFormatter();
@@ -67,13 +78,17 @@ namespace Management.Serialization
                 {
                     _blob.SaveTimes[_] = -1;
                 }
+                for (int _ = 0; _ < Constants.CHECKPOINT_COUNT; _++)
+                {
+                    _blob.SaveCollectibles[_] = 0;
+                }
                 bf.Serialize(fs, _blob);
                 fs.Close();
             }
             fs = File.Open(savepath, FileMode.Open);
             SaveBlob blob = (SaveBlob)bf.Deserialize(fs);
             fs.Close();
-            return blob.SaveTimes;
+            return blob;
 
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using Management;
+using Environment.Collectibles;
 namespace Environment.DoorSystem
 {
     public class Door : GameplayObject
@@ -9,6 +10,7 @@ namespace Environment.DoorSystem
         public Sprite closedSprite;
         private Key key;
         private bool unlocked;
+        Collectible collectible;
 
         private void Start()
         {
@@ -27,8 +29,17 @@ namespace Environment.DoorSystem
         {
             if (unlocked && other.CompareTag("Player") && !paused)
             {
+                if (collectible != null)
+                {
+                    GameManagerScript.gameManager.IncrementCollectibles();
+                }
                 GameManagerScript.gameManager.Next();
             }
+        }
+
+        public void AddCollectible(Collectible collectible)
+        {
+            this.collectible = collectible;
         }
     }
 }

@@ -55,6 +55,7 @@ namespace UI.Loading
                     clip = animation;
                     animator.SetTrigger("Restart");
                     break;
+                case ANIMATIONS.HUB_ON_SUCCESS:
                 case ANIMATIONS.LEVEL_ENTRY:
                 case ANIMATIONS.NEXT_LEVEL:
                     clip = animation;
