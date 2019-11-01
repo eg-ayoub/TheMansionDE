@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 153633965984901605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2522, y: -1461, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3381, y: 1.3381, z: 1.3381}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -40,7 +40,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153633965984901605}
   serializedVersion: 6
-  lengthInSec: 0.5
+  lengthInSec: 0.3
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -1295,7 +1295,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -1304,7 +1304,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0.019607844}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -1320,7 +1320,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 65535
+        atime1: 65342
         atime2: 0
         atime3: 0
         atime4: 0
@@ -1480,7 +1480,9 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: -8300272408009124152, guid: ecfd6e2cdf36f4d8b8a98f180d3a1ac5,
+    - sprite: {fileID: 4930143510551958662, guid: ecfd6e2cdf36f4d8b8a98f180d3a1ac5,
+        type: 3}
+    - sprite: {fileID: 5416604240313892300, guid: ecfd6e2cdf36f4d8b8a98f180d3a1ac5,
         type: 3}
     flipU: 0
     flipV: 0
