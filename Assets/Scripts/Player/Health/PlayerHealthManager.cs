@@ -2,6 +2,7 @@
 using UI.HUD;
 using Management;
 using System.Collections;
+using CameraWorks;
 namespace Player.Health
 {
     // using State;
@@ -40,6 +41,9 @@ namespace Player.Health
                     }
                     GameManagerScript.gameManager.RestartLevel();
                 }
+                PlayerInstanciationScript.playerAudio.PlayDeathEffect();
+                CameraShaker shaker = FindObjectOfType<CameraShaker>();
+                if (shaker) shaker.Shake();
                 StartCoroutine(ResetImmunity());
             }
         }
