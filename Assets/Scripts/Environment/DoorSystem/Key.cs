@@ -17,7 +17,7 @@ namespace Environment.DoorSystem
             {
                 door.Unlock();
                 HudScript.hud.UpdateKeyStatus(true);
-                GetComponent<SpriteRenderer>().enabled = false;
+                GetComponentInChildren<SpriteRenderer>().enabled = false;
                 GetComponent<BoxCollider2D>().enabled = false;
                 GetComponent<AudioSource>().Play();
                 Destroy(gameObject, 1f);

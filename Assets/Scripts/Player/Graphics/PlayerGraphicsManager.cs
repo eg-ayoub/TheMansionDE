@@ -96,6 +96,7 @@ namespace Player
                 {
                     runParticles.Pause();
                     runParticles.Clear();
+                    PauseRunningSoundEffect();
                     ResetTriggers();
                     animator.SetTrigger("jump");
                 }
@@ -129,6 +130,7 @@ namespace Player
             {
                 if (!paused)
                 {
+                    PauseRunningSoundEffect();
                     runParticles.Pause();
                     runParticles.Clear();
                     ResetTriggers();
