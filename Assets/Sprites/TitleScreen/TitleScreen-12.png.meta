@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: 6586214d89819479cb1d53d5206f8db6
+guid: 45a93efdd463940a7b8fc66ddbb4700a
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 230130322005707058
-    second: HubAreaForeground_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -43,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -111,28 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: HubAreaForeground_0
-      rect:
-        serializedVersion: 2
-        x: 1020
-        y: 77
-        width: 1854
-        height: 1613
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0a946cd4066048a0839f66dcb61c0a4
-      internalID: 230130322005707058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
