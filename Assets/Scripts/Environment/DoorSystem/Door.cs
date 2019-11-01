@@ -1,28 +1,25 @@
 using UnityEngine;
 using Management;
 using Environment.Collectibles;
+using System.Collections;
 namespace Environment.DoorSystem
 {
     public class Door : GameplayObject
     {
-
-        public Sprite openSprite;
-        public Sprite closedSprite;
         private Key key;
         private bool unlocked;
         bool hasCollectible;
 
         private void Start()
         {
-            GetComponent<SpriteRenderer>().sprite = closedSprite;
             key = GetComponentInChildren<Key>();
             key.Init(this);
         }
 
         public void Unlock()
         {
-            GetComponent<SpriteRenderer>().sprite = openSprite;
             unlocked = true;
+            StartCoroutine(AlphaUnlock());
         }
 
         private void OnTriggerEnter2D(Collider2D other)
@@ -41,6 +38,16 @@ namespace Environment.DoorSystem
         public void AddCollectible()
         {
             this.hasCollectible = true;
+        }
+
+        IEnumerator AlphaUnlock()
+        {
+            yield return null;
+            for (int i = 0; i < 15; i++)
+            {
+                transform.GetChild(0).GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, (float)(14 - i) / 14);
+                yield return null;
+            }
         }
     }
 }

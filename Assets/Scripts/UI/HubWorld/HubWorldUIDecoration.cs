@@ -12,7 +12,9 @@ namespace UI.HubWorld
             doors = new GameObject[]{
             transform.GetChild(0).gameObject,
             transform.GetChild(1).gameObject,
-            transform.GetChild(2).gameObject
+            transform.GetChild(2).gameObject,
+            transform.GetChild(3).gameObject,
+            transform.GetChild(4).gameObject
         };
         }
 

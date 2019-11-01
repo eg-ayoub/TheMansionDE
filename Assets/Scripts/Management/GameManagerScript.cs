@@ -82,11 +82,12 @@ namespace Management
 #endif
             timer = GetComponentInChildren<Timer>();
             saveManager = GetComponentInChildren<SaveManager>();
+            currentHandle = FindObjectOfType<LevelHandle>();
         }
 
         private void Update()
         {
-            if (KeyMapper.GetButtonDown("Pause"))
+            if (KeyMapper.GetButtonDown("Pause") && currentHandle.buildIndex != 0)
             {
                 ToggleGamePaused();
                 if (paused) PauseMenu.menu.Show();
