@@ -6,6 +6,7 @@ namespace Player
     using Movement;
     using Graphics;
     using Controls;
+    using Audio;
     /// <summary>
     /// player singleton, ensures there is only ever one player in the scene
     /// </summary>
@@ -34,6 +35,7 @@ namespace Player
         public static Transform playerTransform;
         public static PlayerGraphicsManager graphicsManager;
         public static PlayerControllerScript playerController;
+        public static PlayerAudioSource playerAudio;
 
 
         private void Awake()
@@ -65,6 +67,7 @@ namespace Player
                 clipManager = player.GetComponentInChildren<PlayerClipManager>();
                 graphicsManager = player.GetComponentInChildren<PlayerGraphicsManager>();
                 playerController = player.GetComponentInChildren<PlayerControllerScript>();
+                playerAudio = player.GetComponentInChildren<PlayerAudioSource>();
             }
         }
 

@@ -6,6 +6,7 @@ using Player;
 using UI.Loading;
 using UI.HUD;
 using UI.PauseMenu;
+using Player.Audio;
 namespace Management
 {
     using System;
@@ -141,11 +142,11 @@ namespace Management
             }
         }
 
-        public void Enter(int target)
+        public void Enter(int target, bool mansion)
         {
             if (!isLoading)
             {
-                StartCoroutine(EnterLevel(target));
+                StartCoroutine(EnterLevel(target, mansion));
                 isLoading = true;
             }
         }
@@ -159,7 +160,7 @@ namespace Management
             }
         }
 
-        IEnumerator EnterLevel(int index)
+        IEnumerator EnterLevel(int index, bool mansion)
         {
             // * 1 - pause all gameObjects
             ToggleGamePaused();
@@ -202,6 +203,17 @@ namespace Management
             ToggleGamePaused();
             yield return null;
 
+            // * 7b - play audio
+            if (mansion)
+            {
+                PlayerInstanciationScript.playerAudio.SetClip(PlayerAudioSource.CLIP.MADNESS);
+            }
+            else
+            {
+                PlayerInstanciationScript.playerAudio.SetClip(PlayerAudioSource.CLIP.MANSION);
+            }
+            PlayerInstanciationScript.playerAudio.Play();
+
             // * 8 - freeze player and reset controls for 10 frames
             PlayerInstanciationScript.clipManager.Freeze();
             for (int _ = 0; _ < 10; _++)
@@ -233,6 +245,9 @@ namespace Management
             }
 
             LoadingOverlay.overlay.DisplayGameOver();
+
+            // * 2b pause audio
+            PlayerInstanciationScript.playerAudio.Pause();
 
             // * 3 - wait for scene to load
             AsyncOperation levelLoad = SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
@@ -271,6 +286,8 @@ namespace Management
             UnLockPause();
             ToggleGamePaused();
             yield return null;
+
+
 
             // * 8 - freeze player and reset controls for 10 frames
             PlayerInstanciationScript.clipManager.Freeze();
@@ -380,6 +397,9 @@ namespace Management
                 collectiblesInRun = 0;
             }
 
+            // * pause audio
+            if (nextLevel == 0) PlayerInstanciationScript.playerAudio.Pause();
+
             // * 3c - wait for scene to load
             AsyncOperation levelLoad = SceneManager.LoadSceneAsync(nextLevel, LoadSceneMode.Single);
             while (!levelLoad.isDone)
@@ -416,6 +436,7 @@ namespace Management
             UnLockPause();
             ToggleGamePaused();
             yield return null;
+
 
             // * 7b set some UI stuff
             HudScript.hud.UpdateKeyStatus(false);
