@@ -42,6 +42,7 @@ namespace Environment.DoorSystem
 
         IEnumerator AlphaUnlock()
         {
+            GetComponent<AudioSource>().Play();
             yield return null;
             for (int i = 0; i < 15; i++)
             {

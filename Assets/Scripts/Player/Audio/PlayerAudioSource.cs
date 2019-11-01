@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 namespace Player.Audio
 {
@@ -36,5 +37,32 @@ namespace Player.Audio
                     break;
             }
         }
+
+        internal void SetRunningVolume(float volume)
+        {
+            transform.GetChild(0).GetComponent<AudioSource>().volume = volume;
+        }
+
+        internal void PlayRunnigSoundEffect()
+        {
+            transform.GetChild(0).GetComponent<AudioSource>().Play();
+        }
+
+        internal void PauseRunningSoundEffect()
+        {
+            transform.GetChild(0).GetComponent<AudioSource>().Pause();
+        }
+
+        internal void PlayLandingSoundEffect()
+        {
+            transform.GetChild(1).GetComponent<AudioSource>().Play();
+        }
+
+        internal void PlayDeathEffect()
+        {
+            transform.GetChild(2).GetComponent<AudioSource>().Play();
+        }
+
+
     }
 }

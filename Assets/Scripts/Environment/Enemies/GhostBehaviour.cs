@@ -1,5 +1,6 @@
 using UnityEngine;
 using Player;
+using System.Collections;
 namespace Environment.Enemies
 {
     public class GhostBehaviour : GameplayObject
@@ -84,6 +85,20 @@ namespace Environment.Enemies
             if (!paused && other.CompareTag("Player"))
             {
                 PlayerInstanciationScript.hpManager.TakeDamage();
+            }
+        }
+
+        IEnumerator SoundCoroutine()
+        {
+            AudioSource source = GetComponent<AudioSource>();
+            while (true)
+            {
+                source.Play();
+                while (!source.isPlaying)
+                {
+                    yield return null;
+                }
+                yield return new WaitForSeconds(3f);
             }
         }
 
