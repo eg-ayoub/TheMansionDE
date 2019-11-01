@@ -8,6 +8,7 @@ namespace Environment.HubWorld
 {
     public class HubDoor : GameplayObject
     {
+        public bool mansionOfMadness;
 
         public Sprite accessibleSprite;
         public Sprite inaccessibleSprite;
@@ -71,7 +72,7 @@ namespace Environment.HubWorld
             {
                 if (KeyMapper.GetButtonDown("Start"))
                 {
-                    GameManagerScript.gameManager.Enter(targetLevel);
+                    GameManagerScript.gameManager.Enter(targetLevel, mansionOfMadness);
                 }
             }
         }
