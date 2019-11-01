@@ -148,7 +148,6 @@ namespace Player
 
                     if (playerOnGround)
                     {
-                        //Debug.Log(Speed.y);
                         graphicsManager.Land();
                         canDoubleJump = true;
                     }
@@ -200,10 +199,6 @@ namespace Player
                     {
                         if (playerOnGround || jumpTimingIn)
                         {
-                            if (jumpTimingIn)
-                            {
-                                Debug.Log("Time-in jump!");
-                            }
                             graphicsManager.Jump();
                             Speed.y = jumpSpeedY0;
                         }

@@ -29,6 +29,7 @@ namespace Player
                 if (!paused)
                 {
                     animator.SetFloat("runblend", Mathf.Abs(blend));
+                    SetRunningVolume(Mathf.Abs(blend));
                     if (blend != 0)
                     {
                         SetDirectionX(blend > 0);
@@ -167,12 +168,34 @@ namespace Player
 
             public void CreateDustOnLand()
             {
-                Debug.Log("land !");
                 GameObject effect = Instantiate(Resources.Load("Effects/Player/GroundHitParticles")) as GameObject;
                 effect.transform.position = transform.position - 100 * Vector3.up;
                 Destroy(effect, 2f);
                 runParticles.Play();
+                PlayLandingSoundEffect();
+                PlayRunningSoundEffect();
+                SetRunningVolume(0);
             }
+
+
+            public void PlayRunningSoundEffect()
+            {
+                PlayerInstanciationScript.playerAudio.PlayRunnigSoundEffect();
+            }
+            public void PauseRunningSoundEffect()
+            {
+                PlayerInstanciationScript.playerAudio.PauseRunningSoundEffect();
+            }
+            public void SetRunningVolume(float volume)
+            {
+                PlayerInstanciationScript.playerAudio.SetRunningVolume(volume);
+            }
+
+            public void PlayLandingSoundEffect()
+            {
+                PlayerInstanciationScript.playerAudio.PlayLandingSoundEffect();
+            }
+
         }
     }
 }

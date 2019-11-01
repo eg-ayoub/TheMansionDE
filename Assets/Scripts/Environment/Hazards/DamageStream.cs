@@ -24,12 +24,14 @@ namespace Environment.Hazards
 
         IEnumerator Loop()
         {
+            AudioSource source = GetComponent<AudioSource>();
             while (true)
             {
-
+                source.Pause();
                 yield return new WaitForSeconds(delay);
 
                 particles.Play();
+                source.Play();
 
                 while (particles.particleCount != 0)
                 {
