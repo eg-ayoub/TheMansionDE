@@ -273,7 +273,7 @@ namespace Management
             collectiblesInRun = 0;
 
             // * 5c - delay
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(4f);
             LoadingOverlay.overlay.RemoveIndicators();
             // * 6 - play second part of loading animation (shows screen)
             LoadingOverlay.overlay.Resume();
@@ -420,9 +420,10 @@ namespace Management
 
             // * 5b - reset player HP if returning to hub
             if (nextLevel == 0)
+            {
                 PlayerInstanciationScript.hpManager.SetHP(Constants.PLAYER_START_HP);
-
-            yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(2f);
+            }
             LoadingOverlay.overlay.RemoveIndicators();
 
             // * 6 - play second part of loading animation (shows screen)
