@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildIndex: 0
+  checkpoint: 0
   spawnpoint: {fileID: 0}
 --- !u!1 &4642492577439174640
 GameObject:
