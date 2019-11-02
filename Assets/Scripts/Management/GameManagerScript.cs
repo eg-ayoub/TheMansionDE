@@ -77,9 +77,7 @@ namespace Management
             {
                 Application.targetFrameRate = 60;
             }
-#if UNITY_EDITOR
             ToggleGamePaused();
-#endif
             timer = GetComponentInChildren<Timer>();
             saveManager = GetComponentInChildren<SaveManager>();
             currentHandle = FindObjectOfType<LevelHandle>();
@@ -319,6 +317,8 @@ namespace Management
                 yield return null;
             }
 
+            PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
+
             // * 3 - wait for scene to load
             AsyncOperation levelLoad = SceneManager.LoadSceneAsync(currentHandle.buildIndex, LoadSceneMode.Single);
             while (!levelLoad.isDone)
@@ -331,7 +331,6 @@ namespace Management
             yield return null;
 
             // * 5 - put player in spawnpoint and reset collisions
-            PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
             PlayerInstanciationScript.movementModifier.ResetSensors();
             yield return null;
 

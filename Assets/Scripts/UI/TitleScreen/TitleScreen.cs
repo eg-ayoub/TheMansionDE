@@ -26,11 +26,9 @@ namespace UI.TitleScreen
 
         private void Start()
         {
-            #if !UNITY_EDITOR
             animator = GetComponent<Animator>();
             animator.SetTrigger("Start");
             GameManagerScript.gameManager.LockPause();
-            #endif
         }
 
         private void Update()
