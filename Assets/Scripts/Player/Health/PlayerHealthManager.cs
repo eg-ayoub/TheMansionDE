@@ -30,6 +30,7 @@ namespace Player.Health
                 immune = true;
                 if (HP == 1)
                 {
+                    PlayerInstanciationScript.playerAudio.PlayDeathEffect();
                     GameManagerScript.gameManager.ReturnToMain();
                 }
                 else
@@ -41,7 +42,6 @@ namespace Player.Health
                     }
                     GameManagerScript.gameManager.RestartLevel();
                 }
-                PlayerInstanciationScript.playerAudio.PlayDeathEffect();
                 CameraShaker shaker = FindObjectOfType<CameraShaker>();
                 if (shaker) shaker.Shake();
                 StartCoroutine(ResetImmunity());
@@ -83,9 +83,9 @@ namespace Player.Health
         /// setter for HP value, used to load saved game
         /// </summary>
         /// <param name="health">new HP value</param>
-        public void SetHP(int health)
+        public void ResetHP()
         {
-            HP = Mathf.Clamp(health, 0, Constants.PLAYER_MAX_HP);
+            HP = Constants.PLAYER_MAX_HP;
             HudScript.hud.UpdateHP(HP);
         }
 

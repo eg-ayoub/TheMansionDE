@@ -265,7 +265,7 @@ namespace Management
             yield return null;
 
             // * 5b - reset player HP
-            PlayerInstanciationScript.hpManager.SetHP(Constants.PLAYER_START_HP);
+            PlayerInstanciationScript.hpManager.ResetHP();
 
             // * reset collectibles
             collectiblesInRun = 0;
@@ -417,10 +417,10 @@ namespace Management
 
             yield return null;
 
-            // * 5b - reset player HP if returning to hub
+            // * 5b - reset player HP 
+            PlayerInstanciationScript.hpManager.ResetHP();
             if (nextLevel == 0)
             {
-                PlayerInstanciationScript.hpManager.SetHP(Constants.PLAYER_START_HP);
                 yield return new WaitForSeconds(2f);
             }
             LoadingOverlay.overlay.RemoveIndicators();
