@@ -31,7 +31,7 @@ namespace Player.Health
                 if (HP == 1)
                 {
                     PlayerInstanciationScript.playerAudio.PlayDeathEffect();
-                    GameManagerScript.gameManager.ReturnToMain();
+                    GameManagerScript.gameManager.ReturnToMain(false);
                 }
                 else
                 {

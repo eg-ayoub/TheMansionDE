@@ -8,7 +8,6 @@ namespace UI.HUD
     {
         public static HudScript hud;
         HPDisplay hPDisplay;
-        LevelDisplay levelDisplay;
         KeyStatusDisplay keyStatusDisplay;
         TimerDisplay timerDisplay;
 
@@ -28,7 +27,6 @@ namespace UI.HUD
         private void Start()
         {
             hPDisplay = GetComponentInChildren<HPDisplay>();
-            levelDisplay = GetComponentInChildren<LevelDisplay>();
             keyStatusDisplay = GetComponentInChildren<KeyStatusDisplay>();
             timerDisplay = GetComponentInChildren<TimerDisplay>();
         }
@@ -36,11 +34,6 @@ namespace UI.HUD
         public void UpdateHP(int HP)
         {
             hPDisplay.UpdateHP(HP);
-        }
-
-        public void UpdateLevel(int level)
-        {
-            levelDisplay.UpdateLevel(level);
         }
 
         public void UpdateKeyStatus(bool status)
@@ -57,14 +50,12 @@ namespace UI.HUD
         {
             timerDisplay.gameObject.SetActive(true);
             keyStatusDisplay.gameObject.SetActive(true);
-            levelDisplay.gameObject.SetActive(true);
         }
 
         public void EnterHub()
         {
             timerDisplay.gameObject.SetActive(false);
             keyStatusDisplay.gameObject.SetActive(false);
-            levelDisplay.gameObject.SetActive(false);
         }
 
     }

@@ -123,11 +123,11 @@ namespace Management
             pauseLocked = false;
         }
 
-        public void ReturnToMain()
+        public void ReturnToMain(bool fromMenu)
         {
             if (!isLoading)
             {
-                StartCoroutine(HubReturn());
+                StartCoroutine(HubReturn(fromMenu));
                 isLoading = true;
             }
         }
@@ -229,7 +229,7 @@ namespace Management
             isLoading = false;
         }
 
-        IEnumerator HubReturn()
+        IEnumerator HubReturn(bool fromMenu)
         {
             // * 1 - pause all gameObjects
             ToggleGamePaused();
@@ -243,7 +243,7 @@ namespace Management
                 yield return null;
             }
 
-            LoadingOverlay.overlay.DisplayGameOver();
+            if (!fromMenu) LoadingOverlay.overlay.DisplayGameOver();
 
             // * 2b pause audio
             PlayerInstanciationScript.playerAudio.Pause();
@@ -271,7 +271,7 @@ namespace Management
             collectiblesInRun = 0;
 
             // * 5c - delay
-            yield return new WaitForSeconds(4f);
+            if (!fromMenu) yield return new WaitForSeconds(4f);
             LoadingOverlay.overlay.RemoveIndicators();
             // * 6 - play second part of loading animation (shows screen)
             LoadingOverlay.overlay.Resume();
@@ -350,7 +350,6 @@ namespace Management
 
             // * 7b set some UI stuff
             HudScript.hud.UpdateKeyStatus(false);
-            HudScript.hud.UpdateLevel(currentHandle.buildIndex);
 
             // * 8 - freeze player and reset controls for 10 frames
             PlayerInstanciationScript.clipManager.Freeze();
@@ -441,7 +440,6 @@ namespace Management
 
             // * 7b set some UI stuff
             HudScript.hud.UpdateKeyStatus(false);
-            HudScript.hud.UpdateLevel(currentHandle.buildIndex);
 
             // * 8 - freeze player and reset controls for 10 frames
             PlayerInstanciationScript.clipManager.Freeze();

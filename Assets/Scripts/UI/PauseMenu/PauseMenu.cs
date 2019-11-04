@@ -53,5 +53,12 @@ namespace UI.PauseMenu
             GameManagerScript.gameManager.ToggleGamePaused();
             Hide();
         }
+
+        public void HubReturn()
+        {
+            GameManagerScript.gameManager.ToggleGamePaused();
+            Hide();
+            GameManagerScript.gameManager.ReturnToMain(true);
+        }
     }
 }
