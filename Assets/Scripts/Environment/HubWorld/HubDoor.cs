@@ -26,7 +26,7 @@ namespace Environment.HubWorld
 
         public int targetLevel;
 
-        private void Start()
+        public void Start()
         {
             sprite = GetComponent<SpriteRenderer>();
             mLight = GetComponent<Light2D>();
