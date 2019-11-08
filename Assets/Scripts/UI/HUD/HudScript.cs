@@ -50,12 +50,14 @@ namespace UI.HUD
         {
             timerDisplay.gameObject.SetActive(true);
             keyStatusDisplay.gameObject.SetActive(true);
+            transform.GetChild(2).gameObject.SetActive(true);
         }
 
         public void EnterHub()
         {
             timerDisplay.gameObject.SetActive(false);
             keyStatusDisplay.gameObject.SetActive(false);
+            transform.GetChild(2).gameObject.SetActive(false);
         }
 
     }

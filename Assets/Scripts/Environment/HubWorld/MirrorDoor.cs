@@ -10,6 +10,11 @@ namespace Environment.HubWorld
             Matrix4x4 mat = cam.projectionMatrix;
             mat *= Matrix4x4.Scale(new Vector3(-1, 1, 1));
             cam.projectionMatrix = mat;
+
+            // foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
+            // {
+            //     renderer.sortingLayerName = "Mirror";
+            // }
         }
     }
 }

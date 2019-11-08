@@ -23,7 +23,7 @@ TagManager:
   - envTriggers
   - envUpperOnly
   - Enemy
-  - 
+  - mirror
   - 
   - 
   - 
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: WorldUI
     uniqueID: 2049242825
+    locked: 0
+  - name: Mirror
+    uniqueID: 4232989883
     locked: 0
