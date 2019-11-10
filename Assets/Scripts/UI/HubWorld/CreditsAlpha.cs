@@ -7,7 +7,7 @@ public class CreditsAlpha : MonoBehaviour
     Text[] names;
 
     const float minDistance = 200f;
-    const float maxDistance = 2000f;
+    const float maxDistance = 1000f;
 
     private void Start()
     {
