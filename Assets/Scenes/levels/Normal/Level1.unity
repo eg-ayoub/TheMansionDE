@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 159928252}
   - component: {fileID: 159928251}
   m_Layer: 0
-  m_Name: SpiderWeb
+  m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,7 +744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 762565670}
   m_Layer: 0
-  m_Name: Filling
+  m_Name: VisualPolish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
