@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -15730,6 +15730,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1462
       objectReference: {fileID: 0}
+    - target: {fileID: 3581986684419474188, guid: 62409614f3a33c05ca7ede11ccf9908e,
+        type: 3}
+      propertyPath: DopplerLevel
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3581986684419474188, guid: 62409614f3a33c05ca7ede11ccf9908e,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62409614f3a33c05ca7ede11ccf9908e, type: 3}
 --- !u!1001 &2020021440
@@ -17714,6 +17724,14 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b240a03af9ebfebaca2dd8425567bf00, type: 3}
+    - target: {fileID: 2100811520, guid: 7f416c96fbb7ba84782728c775596bef, type: 3}
+      propertyPath: forceDebugMapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100811520, guid: 7f416c96fbb7ba84782728c775596bef, type: 3}
+      propertyPath: debugMapping
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f416c96fbb7ba84782728c775596bef, type: 3}
 --- !u!1001 &7615469233286488040
@@ -18055,11 +18073,11 @@ PrefabInstance:
     - target: {fileID: 1501125968722018961, guid: e078a5fa15e12b7a0a8e2f605026754c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1.2998047
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1792886399, guid: e078a5fa15e12b7a0a8e2f605026754c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -82.8999
+      value: -83
       objectReference: {fileID: 0}
     - target: {fileID: 8655809136961704026, guid: e078a5fa15e12b7a0a8e2f605026754c,
         type: 3}

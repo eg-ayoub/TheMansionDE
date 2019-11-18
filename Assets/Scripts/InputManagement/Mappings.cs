@@ -147,16 +147,31 @@ namespace InputManagement
             DS4AllAxes["LSV"]
         };
 
-        public static void UpdaterSetup(AxisButtonUpdater updater)
+        public static void UpdaterSetup(AxisButtonUpdater updater, JoypadChoser.mapping map)
         {
             updater.Reset();
-            /* foreach (ButtonMap button in XBoxOneAllButtons.Values)
+            switch (map)
             {
-                if (button is AxisButtonMap)
-                {
-                    updater.AddButton((AxisButtonMap)button);
-                }
-            } */
+                case JoypadChoser.mapping.XBONE:
+                    foreach (ButtonMap button in XBoxOneAllButtons.Values)
+                    {
+                        if (button is AxisButtonMap)
+                        {
+                            updater.AddButton((AxisButtonMap)button);
+                        }
+                    }
+                    break;
+                case JoypadChoser.mapping.DS4:
+                    foreach (ButtonMap button in DS4AllButtons.Values)
+                    {
+                        if (button is AxisButtonMap)
+                        {
+                            updater.AddButton((AxisButtonMap)button);
+                        }
+                    }
+                    break;
+            }
+
         }
     }
 
