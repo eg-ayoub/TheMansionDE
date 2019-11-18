@@ -10,6 +10,7 @@ using Player.Audio;
 namespace Management
 {
     using System;
+    using System.Threading;
     using Serialization;
     /// <summary>
     /// Game Manager is a singleton class that manages all aspects of the game.

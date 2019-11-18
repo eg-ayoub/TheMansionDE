@@ -68,32 +68,20 @@ namespace UI.Loading
 
         public void Resume()
         {
-            if (clip > 0)
-            {
-                animator.SetTrigger("Resume");
-            }
+            animator.SetTrigger("Resume");
         }
         public void Reset()
         {
-            if (clip > 0)
-            {
-                isIdle = isDone = false;
-                clip = ANIMATIONS.NONE;
-            }
+            isIdle = isDone = false;
+            clip = ANIMATIONS.NONE;
         }
         public void Idling()
         {
-            if (clip > 0)
-            {
-                isIdle = true;
-            }
+            isIdle = true;
         }
         public void Done()
         {
-            if (clip > 0)
-            {
-                isDone = true;
-            }
+            isDone = true;
         }
 
         internal void DisplayWin()
