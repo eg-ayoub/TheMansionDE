@@ -207,8 +207,14 @@ namespace Player
                             // ? what do I do about jump on wall
                             Speed.y = climbSpeed;
                             Speed.x = (playerOnLeftWall ? 1 : -1) * maxAirborneSpeed;
-                            // graphicsManager.ClimbJump();
-                            //TODO:speed.x depends on the control
+                            if (canDoubleJump)
+                            {
+                                graphicsManager.Jump();
+                            }
+                            else
+                            {
+                                graphicsManager.DoubleJump();
+                            }
                         }
                         else if (canDoubleJump)
                         {

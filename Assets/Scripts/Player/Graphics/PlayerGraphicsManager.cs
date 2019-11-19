@@ -99,6 +99,7 @@ namespace Player
                     PauseRunningSoundEffect();
                     ResetTriggers();
                     animator.SetTrigger("jump");
+                    animator.SetFloat("nodoublejump", 0);
                 }
             }
 
@@ -108,8 +109,10 @@ namespace Player
                 {
                     runParticles.Pause();
                     runParticles.Clear();
-                    Jump();
-                    // ! replace me
+                    PauseRunningSoundEffect();
+                    ResetTriggers();
+                    animator.SetTrigger("jump");
+                    animator.SetFloat("nodoublejump", 1);
                 }
             }
             /// <summary>
