@@ -16,9 +16,16 @@ namespace Environment.Enemies
 
         public GDIRECTION direction;
         private Vector3 offset;
-        const float approachDistance = 500f;
-        const float maxDistance = 2000f;
-        float tau = .6f;
+
+        float speedmultiplier;
+
+        public float forgetDistance = 5000f;
+        public float speedupDistance = 2000f;
+        public float slowdownDistance = 1000f;
+        public float attachDistance = 500f;
+
+        public float slowSpeedMultiplier = 1;
+        public float fastSpeedMultiplier = 2;
 
         private void Start()
         {
@@ -30,48 +37,57 @@ namespace Environment.Enemies
             switch (direction)
             {
                 case GDIRECTION.CENTER:
-                    offset = approachDistance * Vector3.zero;
+                    offset = attachDistance * Vector3.zero;
                     break;
                 case GDIRECTION.UP:
-                    offset = approachDistance * Vector3.up;
+                    offset = attachDistance * Vector3.up;
                     break;
                 case GDIRECTION.DOWN:
-                    offset = approachDistance * Vector3.down;
+                    offset = attachDistance * Vector3.down;
                     break;
                 case GDIRECTION.LEFT:
-                    offset = approachDistance * Vector3.left;
+                    offset = attachDistance * Vector3.left;
                     break;
                 case GDIRECTION.RIGHT:
-                    offset = approachDistance * Vector3.right;
+                    offset = attachDistance * Vector3.right;
                     break;
             }
 
-            float distance = Mathf.Clamp(
-                (transform.position
-                    - PlayerInstanciationScript.playerTransform.position).magnitude,
-                approachDistance,
-                maxDistance
-            );
-
-            tau = .1f + .5f * (
-                (distance - approachDistance)
-                / (maxDistance - approachDistance)
-            );
         }
 
         private void Update()
         {
             if (!paused)
             {
-                Vector3 target =
-                    PlayerInstanciationScript
+                Vector3 target = PlayerInstanciationScript
                         .playerTransform
                         .transform
                         .position
-                    + offset;
+                    + offset - transform.position;
+                target.z = 0;
 
-                Vector3 deltaPosition = 1 / tau * (target - transform.position) * Time.deltaTime;
-                deltaPosition.z = 0;
+                if (target.magnitude > forgetDistance)
+                {
+                    speedmultiplier = 0;
+                }
+                else if (target.magnitude > speedupDistance)
+                {
+                    speedmultiplier = slowSpeedMultiplier;
+                }
+                else if (target.magnitude > slowdownDistance)
+                {
+                    speedmultiplier = fastSpeedMultiplier;
+                }
+                else if (target.magnitude > 10)
+                {
+                    speedmultiplier = slowSpeedMultiplier;
+                }
+                else
+                {
+                    speedmultiplier = 0;
+                }
+
+                Vector3 deltaPosition = speedmultiplier * target.normalized * 1000f * Time.deltaTime;
 
                 if (deltaPosition.x > 0) transform.localScale = new Vector3(-1, 1, 1);
                 else transform.localScale = new Vector3(1, 1, 1);
