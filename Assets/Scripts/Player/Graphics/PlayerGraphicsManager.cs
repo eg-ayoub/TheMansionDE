@@ -98,8 +98,8 @@ namespace Player
                     runParticles.Clear();
                     PauseRunningSoundEffect();
                     ResetTriggers();
-                    animator.SetTrigger("jump");
                     animator.SetFloat("nodoublejump", 0);
+                    animator.SetTrigger("jump");
                 }
             }
 
@@ -111,8 +111,8 @@ namespace Player
                     runParticles.Clear();
                     PauseRunningSoundEffect();
                     ResetTriggers();
-                    animator.SetTrigger("jump");
                     animator.SetFloat("nodoublejump", 1);
+                    animator.SetTrigger("jump");
                 }
             }
             /// <summary>
@@ -123,6 +123,7 @@ namespace Player
                 if (!paused)
                 {
                     ResetTriggers();
+                    animator.SetFloat("nodoublejump", 0);
                     animator.SetTrigger("land");
                 }
             }
