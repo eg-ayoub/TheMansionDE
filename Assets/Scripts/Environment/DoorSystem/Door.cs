@@ -10,6 +10,16 @@ namespace Environment.DoorSystem
         private bool unlocked;
         bool hasCollectible;
 
+        private void Update()
+        {
+#if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                GameManagerScript.gameManager.Next();
+            }
+#endif
+        }
+
         private void Start()
         {
             key = GetComponentInChildren<Key>();
