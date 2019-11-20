@@ -249,6 +249,14 @@ namespace Player
 
                     if (trampolineTrigger)
                     {
+                        if (canDoubleJump)
+                        {
+                            graphicsManager.Jump();
+                        }
+                        else
+                        {
+                            graphicsManager.DoubleJump();
+                        }
                         graphicsManager.Jump();
                         Speed.y = jumpSpeedY0;
                         jumpSpeedY0 = (4 * jumpHeight) / jumpTime;
