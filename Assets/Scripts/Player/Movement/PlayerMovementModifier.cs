@@ -257,7 +257,6 @@ namespace Player
                         {
                             graphicsManager.DoubleJump();
                         }
-                        graphicsManager.Jump();
                         Speed.y = jumpSpeedY0;
                         jumpSpeedY0 = (4 * jumpHeight) / jumpTime;
                         trampolineTrigger = false;
