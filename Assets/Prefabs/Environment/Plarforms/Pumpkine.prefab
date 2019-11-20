@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 7269911725579830579}
   - component: {fileID: 4865408120047138024}
   - component: {fileID: 350785858}
-  m_Layer: 8
+  m_Layer: 15
   m_Name: Pumpkine
   m_TagString: env
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3834646448338308241}
   - component: {fileID: 7929334130456315845}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: sprite
   m_TagString: env
   m_Icon: {fileID: 0}
