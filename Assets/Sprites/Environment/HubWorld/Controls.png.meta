@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: -1182029525264311852
     second: Controls_2
+  - first:
+      213: -9178436727053285969
+    second: Controls_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -123,11 +126,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 61
-        y: 550
-        width: 358
-        height: 273
+        y: 623
+        width: 158
+        height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,12 +146,12 @@ TextureImporter:
       name: Controls_1
       rect:
         serializedVersion: 2
-        x: 745
-        y: 360
-        width: 452
-        height: 263
+        x: 757
+        y: 457
+        width: 140
+        height: 91
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -164,12 +167,12 @@ TextureImporter:
       name: Controls_2
       rect:
         serializedVersion: 2
-        x: 1544
-        y: 413
-        width: 463
-        height: 326
+        x: 890
+        y: 530
+        width: 143
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,6 +180,27 @@ TextureImporter:
       bones: []
       spriteID: d4b25b7d312704ad98c261da3b066dae
       internalID: -1182029525264311852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Controls_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 725
+        width: 113
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc7dc121707041abab3645fb430cd50
+      internalID: -9178436727053285969
       vertices: []
       indices: 
       edges: []
