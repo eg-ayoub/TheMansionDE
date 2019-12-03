@@ -27,12 +27,12 @@ namespace UI.PauseMenu
                 {
                     if (up)
                     {
-                        selectedButton = (selectedButton + buttons.Length + 1) % buttons.Length;
+                        selectedButton = (selectedButton + buttons.Length - 1) % buttons.Length;
                         canMove = 0;
                     }
                     if (down)
                     {
-                        selectedButton = (selectedButton + buttons.Length - 1) % buttons.Length;
+                        selectedButton = (selectedButton + buttons.Length + 1) % buttons.Length;
                         canMove = 0;
                     }
                 }
@@ -41,8 +41,7 @@ namespace UI.PauseMenu
                     canMove++;
                 }
 
-
-                if (up || down) eventSystem.SetSelectedGameObject(buttons[selectedButton]);
+                eventSystem.SetSelectedGameObject(buttons[selectedButton]);
 
                 if (select)
                 {
