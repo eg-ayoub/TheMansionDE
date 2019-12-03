@@ -1,13 +1,22 @@
 fileFormatVersion: 2
-guid: 6586214d89819479cb1d53d5206f8db6
+guid: c368bff2bfc7b435fba31f273403e016
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 230130322005707058
-    second: HubAreaForeground_0
+      213: -1208579924847259354
+    second: Glowing_Flowers_0
   - first:
-      213: -6075135352785451189
-    second: HubAreaForeground_1
+      213: -3997350597883076904
+    second: Glowing_Flowers_1
+  - first:
+      213: -5180947587556382150
+    second: Glowing_Flowers_2
+  - first:
+      213: -3562514678647596899
+    second: Glowing_Flowers_3
+  - first:
+      213: -6500617351051374734
+    second: Glowing_Flowers_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -116,34 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HubAreaForeground_0
+      name: Glowing_Flowers_0
       rect:
         serializedVersion: 2
-        x: 1501
-        y: 77
-        width: 1373
-        height: 1613
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0a946cd4066048a0839f66dcb61c0a4
-      internalID: 230130322005707058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: HubAreaForeground_1
-      rect:
-        serializedVersion: 2
-        x: 1072
-        y: 68
-        width: 316
-        height: 1594
+        x: 202
+        y: 1317
+        width: 429
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,8 +139,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baeded87899bb44e19dc4e6612abf88b
-      internalID: -6075135352785451189
+      spriteID: 2eb123901b8c045cb819c8e82e011278
+      internalID: -1208579924847259354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing_Flowers_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1019
+        width: 226
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329f44427648f4ead9015afc63058ec8
+      internalID: -3997350597883076904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing_Flowers_2
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 1013
+        width: 366
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62131a735847493e8ff86414806a5d3
+      internalID: -5180947587556382150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing_Flowers_3
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 598
+        width: 270
+        height: 305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665f698b213884ff4986ebe5cda0f98a
+      internalID: -3562514678647596899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Glowing_Flowers_4
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 558
+        width: 292
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d241b2713174d47eea88225c68958519
+      internalID: -6500617351051374734
       vertices: []
       indices: 
       edges: []

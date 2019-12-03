@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: c9a70408cba6445c6988028bec5c9612
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4783380919058496157
+    second: SpiderWeb_0
+  - first:
+      213: -8775846123187708947
+    second: SpiderWeb_1
+  - first:
+      213: 2283331698821738908
+    second: SpiderWeb_2
+  - first:
+      213: 5180375366246494546
+    second: SpiderWeb_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +120,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SpiderWeb_0
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 1210
+        width: 504
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aead886a9fe74b13bcb132eadd358de
+      internalID: 4783380919058496157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderWeb_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 563
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637d9b046379e45e589d1c44fada14cd
+      internalID: -8775846123187708947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderWeb_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1296
+        width: 916
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d51017ff7b6734813aeca9e8509ff96d
+      internalID: 2283331698821738908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiderWeb_3
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 1178
+        width: 276
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a81abade842347b0b909ab5770bb12d
+      internalID: 5180375366246494546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
