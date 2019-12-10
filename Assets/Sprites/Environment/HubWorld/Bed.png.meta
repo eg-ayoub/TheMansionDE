@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 76cf2e9644dc047098385c9a29e9d7f9
+guid: be8fcd6da91954e50b86a2d99f4f187d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2712965080552235136
-    second: Windows_0
+      213: -6327107731223078017
+    second: Bed
+  - first:
+      213: 3293916844936228205
+    second: BedroomLight
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -50,7 +53,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Windows_0
+      name: Bed
       rect:
         serializedVersion: 2
-        x: 713
-        y: 550
-        width: 358
-        height: 526
+        x: 61
+        y: 102
+        width: 507
+        height: 284
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +130,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0539a45caf5f84b31a5283dedb147600
-      internalID: -2712965080552235136
+      spriteID: 8961a3c762b1845528982b2388d6b8ca
+      internalID: -6327107731223078017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BedroomLight
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 0
+        width: 553
+        height: 441
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3934ffe08e9df4a43a02ab2cc65b1c55
+      internalID: 3293916844936228205
       vertices: []
       indices: 
       edges: []
