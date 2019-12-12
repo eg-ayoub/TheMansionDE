@@ -7,6 +7,7 @@ using UI.Loading;
 using UI.HUD;
 using UI.PauseMenu;
 using Player.Audio;
+using Cinemachine;
 namespace Management
 {
     using System;
@@ -297,11 +298,12 @@ namespace Management
                 yield return null;
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
+            PlayerInstanciationScript.player.Sleep();
+            FindObjectOfType<CinemachineVirtualCamera>().Follow = PlayerInstanciationScript.playerTransform;
             // // * stop timer (we don't need it in hubworld)
             // timer.StopTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
             isLoading = false;
-
         }
 
         IEnumerator LevelRestart()

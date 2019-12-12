@@ -87,7 +87,7 @@ namespace Player
                     PlayerRect.Reset(PlayerBox, skinWidth);
                     VerticalMove(ref deltaPosition);
                     HorizontalMove(ref deltaPosition);
-                    if (!frozen)
+                    if (!frozen && !PlayerInstanciationScript.player.sleepState)
                     {
                         playerPhysics.SetRealDeltaPosition(deltaPosition);
                         playerTransform.Translate(deltaPosition);

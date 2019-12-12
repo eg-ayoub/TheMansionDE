@@ -26,6 +26,7 @@ namespace Player
         /// direction the player is looking at
         /// </summary>
         public DIRECTION direction;
+        public bool sleepState = true;
 
 
         public static PlayerHealthManager hpManager;
@@ -69,6 +70,22 @@ namespace Player
                 playerController = player.GetComponentInChildren<PlayerControllerScript>();
                 playerAudio = player.GetComponentInChildren<PlayerAudioSource>();
             }
+        }
+
+        public void WakeUp()
+        {
+            graphicsManager.Wake();
+        }
+
+        public void _WakeUp()
+        {
+            sleepState = false;
+        }
+
+        public void Sleep()
+        {
+            sleepState = true;
+            graphicsManager.Sleep();
         }
 
     }

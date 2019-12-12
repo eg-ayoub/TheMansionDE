@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: 93694bc2532677a6d913e895e2ce9d17
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1126800067449947865
+    second: TedWakingup 2_0
+  - first:
+      213: -1634710377648161233
+    second: TedWakingup 2_1
+  - first:
+      213: -4348090726750097993
+    second: TedWakingup 2_2
+  - first:
+      213: -8113838544370344345
+    second: TedWakingup 2_3
+  - first:
+      213: 428422230430217609
+    second: TedWakingup 2_4
+  - first:
+      213: 3473541021490425646
+    second: TedWakingup 2_5
+  - first:
+      213: 8550816874501182364
+    second: TedWakingup 2_6
+  - first:
+      213: 7646895520292226431
+    second: TedWakingup 2_7
+  - first:
+      213: 1990073539403987521
+    second: TedWakingup 2_8
+  - first:
+      213: -7941147321981328788
+    second: TedWakingup 2_9
+  - first:
+      213: -1377872444612746669
+    second: TedWakingup 2_10
+  - first:
+      213: 7597989796288634682
+    second: TedWakingup 2_11
+  - first:
+      213: 6324652225866516844
+    second: TedWakingup 2_12
+  - first:
+      213: -6245531312534584064
+    second: TedWakingup 2_13
+  - first:
+      213: 2777182295449539277
+    second: TedWakingup 2_14
+  - first:
+      213: -7959297014427482440
+    second: TedWakingup 2_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TedWakingup 2_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 409
+        width: 453
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76938b07198a38229949c05d27f80720
+      internalID: -1126800067449947865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_1
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 407
+        width: 388
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5df2b3bd9c0a4c819be15d3658fcdbb
+      internalID: -1634710377648161233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_2
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 394
+        width: 359
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a90af97d342534f852de1fc6d6fada
+      internalID: -4348090726750097993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_3
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 401
+        width: 324
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c046463d21fbd7e487748f7551b699a
+      internalID: -8113838544370344345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_4
+      rect:
+        serializedVersion: 2
+        x: 2131
+        y: 402
+        width: 310
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ace2dda8a238b59c8d4ed9cbf15ed5d
+      internalID: 428422230430217609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_5
+      rect:
+        serializedVersion: 2
+        x: 2629
+        y: 387
+        width: 321
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30235fea026a2bbe8ae3a088a225d7a
+      internalID: 3473541021490425646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_6
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 370
+        width: 308
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89491f1de9683293eaee946ade85788a
+      internalID: 8550816874501182364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_7
+      rect:
+        serializedVersion: 2
+        x: 3653
+        y: 373
+        width: 303
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c4f85f8633db0df898a693ffef8bba
+      internalID: 7646895520292226431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_8
+      rect:
+        serializedVersion: 2
+        x: 4134
+        y: 380
+        width: 302
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71c9d42df096cd1bb0498073570aac1
+      internalID: 1990073539403987521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_9
+      rect:
+        serializedVersion: 2
+        x: 4640
+        y: 381
+        width: 295
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ff296f5c8daffd997dc45ec74c099a
+      internalID: -7941147321981328788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_10
+      rect:
+        serializedVersion: 2
+        x: 5178
+        y: 352
+        width: 240
+        height: 429
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0df98c5950aa1c6a6fdd245a9614d6
+      internalID: -1377872444612746669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_11
+      rect:
+        serializedVersion: 2
+        x: 5699
+        y: 359
+        width: 231
+        height: 409
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f63d6b53a61a7acc81afb76f90e5d10
+      internalID: 7597989796288634682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_12
+      rect:
+        serializedVersion: 2
+        x: 6170
+        y: 262
+        width: 306
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dcbd333f1b78e92fac01c3b093debd1
+      internalID: 6324652225866516844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_13
+      rect:
+        serializedVersion: 2
+        x: 6669
+        y: 108
+        width: 318
+        height: 402
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef1bb3cd04b1e9aaa778f216b40139f
+      internalID: -6245531312534584064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_14
+      rect:
+        serializedVersion: 2
+        x: 7217
+        y: 108
+        width: 251
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9507e62e5c1fb86499f9b1798fd2e76e
+      internalID: 2777182295449539277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedWakingup 2_15
+      rect:
+        serializedVersion: 2
+        x: 7852
+        y: 108
+        width: 187
+        height: 421
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d563077a27bf1e67ae07b52406f1b23
+      internalID: -7959297014427482440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

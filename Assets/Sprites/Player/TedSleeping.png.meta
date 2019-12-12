@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 96dca956ee402a652b409eb7b21f6ff9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3136079820513278444
+    second: TedSleeping_0
+  - first:
+      213: 8812989435776224428
+    second: TedSleeping_1
+  - first:
+      213: -1951979847800434712
+    second: TedSleeping_2
+  - first:
+      213: -3544979425883038617
+    second: TedSleeping_3
+  - first:
+      213: 5610110394779359054
+    second: TedSleeping_4
+  - first:
+      213: 4828816543300046962
+    second: TedSleeping_5
+  - first:
+      213: -6690271664951737951
+    second: TedSleeping_6
+  - first:
+      213: -7424384293237231280
+    second: TedSleeping_7
+  - first:
+      213: -5248228166693554270
+    second: TedSleeping_8
+  - first:
+      213: 8299008013344796610
+    second: TedSleeping_9
+  - first:
+      213: 3643824782049261880
+    second: TedSleeping_10
+  - first:
+      213: -2690022321767532235
+    second: TedSleeping_11
+  - first:
+      213: 374360178453256968
+    second: TedSleeping_12
+  - first:
+      213: -706106885260410382
+    second: TedSleeping_13
+  - first:
+      213: -2166712896242505392
+    second: TedSleeping_14
+  - first:
+      213: -7807434571571768080
+    second: TedSleeping_15
+  - first:
+      213: 8421724738442876758
+    second: TedSleeping_16
+  - first:
+      213: -2522845405615756000
+    second: TedSleeping_17
+  - first:
+      213: -222471317069875185
+    second: TedSleeping_18
+  - first:
+      213: -5333321145226582813
+    second: TedSleeping_19
+  - first:
+      213: 5719157991961427018
+    second: TedSleeping_20
+  - first:
+      213: 8520269955158238483
+    second: TedSleeping_21
+  - first:
+      213: -7809235043829499384
+    second: TedSleeping_22
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TedSleeping_0
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 519
+        width: 37
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b87edc0021e7585abbf5e2102262e0d
+      internalID: 3136079820513278444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_1
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 517
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bb60f21710fb8c7bd0cb5f2c28c863
+      internalID: 8812989435776224428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_2
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 546
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8736a4c290b5ecc12983e09036136cb5
+      internalID: -1951979847800434712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_3
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 539
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8c8e42749c09a4fa6a62231a4c1085
+      internalID: -3544979425883038617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_4
+      rect:
+        serializedVersion: 2
+        x: 2698
+        y: 563
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9adca36458bd6fca65fc1f8b0adb7a
+      internalID: 5610110394779359054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_5
+      rect:
+        serializedVersion: 2
+        x: 3275
+        y: 558
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705da60f9ff81bad5bad241558800bb1
+      internalID: 4828816543300046962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_6
+      rect:
+        serializedVersion: 2
+        x: 3881
+        y: 554
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91424ddbd1abc4be3b44a9ca54585f73
+      internalID: -6690271664951737951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_7
+      rect:
+        serializedVersion: 2
+        x: 3986
+        y: 547
+        width: 28
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b9d1b22605f05aca128cbddf84c804
+      internalID: -7424384293237231280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_8
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c6c878a90bfd85ca93682c1aa4f60e
+      internalID: -5248228166693554270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_9
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 494
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc956407b7ab91a1b1a32256d3d388c
+      internalID: 8299008013344796610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_10
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dd820ee3872fc98ba6593df3e0e550
+      internalID: 3643824782049261880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_11
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f8c33a390200ca18d5ab4df1e90612
+      internalID: -2690022321767532235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_12
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee341666903f8cbc4afee9dcea00b28e
+      internalID: 374360178453256968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_13
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 500
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6705934834ba5e804b08a323d68d4a28
+      internalID: -706106885260410382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_14
+      rect:
+        serializedVersion: 2
+        x: 2498
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2905cc5d78ac9e8b7811f070152dba
+      internalID: -2166712896242505392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_15
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b6f53e9aca61e5498cdbdddc0eed4e
+      internalID: -7807434571571768080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_16
+      rect:
+        serializedVersion: 2
+        x: 3689
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c150ccf019d857178e4694205a1d573
+      internalID: 8421724738442876758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_17
+      rect:
+        serializedVersion: 2
+        x: 4285
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b2de9c37bfca8179c68de868868815
+      internalID: -2522845405615756000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_18
+      rect:
+        serializedVersion: 2
+        x: 4885
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4cd91f08ec59e8197b463c3ab3ab1d
+      internalID: -222471317069875185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_19
+      rect:
+        serializedVersion: 2
+        x: 5487
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be54d1ec6637cdee39d86e80f08c1880
+      internalID: -5333321145226582813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_20
+      rect:
+        serializedVersion: 2
+        x: 6081
+        y: 283
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e6e79c2e57edd123ac7b6d11fe0cab1
+      internalID: 5719157991961427018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_21
+      rect:
+        serializedVersion: 2
+        x: 6686
+        y: 285
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c30f988992e6b648820c7000bf5cdb7
+      internalID: 8520269955158238483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TedSleeping_22
+      rect:
+        serializedVersion: 2
+        x: 7284
+        y: 284
+        width: 453
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31acd2b05c34e7af08474fa11398c438
+      internalID: -7809235043829499384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -50,6 +50,7 @@ namespace UI.HUD
         {
             timerDisplay.gameObject.SetActive(true);
             keyStatusDisplay.gameObject.SetActive(true);
+            hPDisplay.gameObject.SetActive(true);
             transform.GetChild(2).gameObject.SetActive(true);
         }
 
@@ -57,6 +58,7 @@ namespace UI.HUD
         {
             timerDisplay.gameObject.SetActive(false);
             keyStatusDisplay.gameObject.SetActive(false);
+            hPDisplay.gameObject.SetActive(false);
             transform.GetChild(2).gameObject.SetActive(false);
         }
 

@@ -142,6 +142,29 @@ namespace Player
                 }
             }
 
+            public void Wake()
+            {
+                if (!paused)
+                {
+                    ResetTriggers();
+                    animator.SetTrigger("wake");
+                }
+            }
+
+            public void _Wake()
+            {
+                PlayerInstanciationScript.player._WakeUp();
+            }
+
+            public void Sleep()
+            {
+                if (!paused)
+                {
+                    ResetTriggers();
+                    animator.SetTrigger("sleep");
+                }
+            }
+
             public void TouchWall()
             {
                 if (!paused)

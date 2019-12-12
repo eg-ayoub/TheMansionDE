@@ -29,10 +29,17 @@ namespace Player.Controls
         /// </summary>
         void Update()
         {
-            if (!paused)
+            if (!paused && !PlayerInstanciationScript.player.sleepState)
             {
                 FetchOneTimeControls();
                 FetchControls();
+            }
+            else if (!paused && PlayerInstanciationScript.player.sleepState)
+            {
+                if (KeyMapper.AnyKeyDown())
+                {
+                    PlayerInstanciationScript.player.WakeUp();
+                }
             }
         }
         /// <summary>

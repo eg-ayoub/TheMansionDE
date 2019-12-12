@@ -1,6 +1,5 @@
 using UnityEngine;
 using Management;
-using InputManagement;
 
 namespace UI.TitleScreen
 {
@@ -33,7 +32,7 @@ namespace UI.TitleScreen
 
         private void Update()
         {
-            if (!finished && KeyMapper.AnyKeyDown() && fadedIn)
+            if (!finished && fadedIn)
             {
                 LaunchGame();
             }
