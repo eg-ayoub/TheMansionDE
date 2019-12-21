@@ -32,7 +32,8 @@ namespace Player
                     SetRunningVolume(Mathf.Abs(blend));
                     if (blend != 0)
                     {
-                        SetDirectionX(blend > 0);
+                        // SetDirectionX(blend > 0);
+                        animator.SetFloat("directionblend", blend > 0 ? 0 : 1);
                     }
                 }
             }
@@ -40,30 +41,33 @@ namespace Player
             /// sets the direction player avatar is looking at 
             /// </summary>
             /// <param name="right">wether the avatar is facing to the right side of the screen</param>
-            void SetDirectionX(bool right)
-            {
-                if (!paused)
-                {
-                    if ((right ? -1 : 1) * Mathf.Sign(transform.localScale.x) == -1)
-                    {
-                        Flip();
-                    }
-                    float newScaleX = (right ? -1 : 1) * Mathf.Abs(transform.localScale.x);
-                    StartCoroutine(FlipCoroutine(newScaleX));
-                }
-            }
-            IEnumerator FlipCoroutine(float newScaleX)
-            {
-                for (int _ = 0; _ < 5; _++)
-                {
-                    if (paused)
-                    {
-                        _--;
-                    }
-                    yield return null;
-                }
-                transform.localScale = new Vector3(newScaleX, transform.localScale.y, transform.localScale.z);
-            }
+            // void SetDirectionX(bool right)
+            // {
+            //     if (!paused)
+            //     {
+            //         if ((right ? -1 : 1) * Mathf.Sign(transform.localScale.x) == -1)
+            //         {
+            //             Flip();
+            //         }
+            //         float newScaleX = (right ? -1 : 1) * Mathf.Abs(transform.localScale.x);
+            //         transform.localScale = new Vector3(newScaleX, transform.localScale.y, transform.localScale.z);
+
+            //         // StartCoroutine(FlipCoroutine(newScaleX));
+            //     }
+            // }
+            // IEnumerator FlipCoroutine(float newScaleX)
+            // {
+            //     for (int _ = 0; _ < 5; _++)
+            //     {
+            //         if (paused)
+            //         {
+            //             _--;
+            //         }
+            //         yield return null;
+            //     }
+            //     transform.localScale = new Vector3(newScaleX, transform.localScale.y, transform.localScale.z);
+            //     yield return null;
+            // }
             /// <summary>
             /// sets the direction player avatar is looking at 
             /// </summary>
