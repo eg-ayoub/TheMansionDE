@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -119.7}
+  m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1061450030
@@ -212,7 +212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -40}
+  m_AnchoredPosition: {x: 0, y: -119}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4474320827897399725
@@ -385,11 +385,11 @@ RectTransform:
   m_Children:
   - {fileID: 5562195762257551066}
   m_Father: {fileID: 1990857513042788520}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40.1}
+  m_AnchoredPosition: {x: 0, y: 97.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3310879395107843751
@@ -751,8 +751,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4881863530137821378}
-  - {fileID: 3330969091358465552}
   - {fileID: 2439397855377950823}
+  - {fileID: 3330969091358465552}
   - {fileID: 8793325726913076582}
   - {fileID: 1061450028}
   m_Father: {fileID: 1521405128747802253}
@@ -830,11 +830,11 @@ RectTransform:
   m_Children:
   - {fileID: 7048745087464764864}
   m_Father: {fileID: 1990857513042788520}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 111.7}
+  m_AnchoredPosition: {x: 0, y: 26.2}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8064009121800773466
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 5351892792780198623}
+  m_FirstSelected: {fileID: 2663959917434603581}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!114 &9045705117083522525
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   buttons:
-  - {fileID: 5351892792780198623}
   - {fileID: 2663959917434603581}
-  - {fileID: 152228851260464452}
+  - {fileID: 5351892792780198623}
   - {fileID: 1061450027}
+  - {fileID: 152228851260464452}
