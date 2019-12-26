@@ -376,9 +376,14 @@ namespace Management
 
             // * 2 - play first part of the loading animation (hides the screen)
             if (currentHandle.checkpoint == 0)
+            {
                 LoadingOverlay.overlay.Play(LoadingOverlay.ANIMATIONS.NEXT_LEVEL);
+            }
             else
+            {
                 LoadingOverlay.overlay.Play(LoadingOverlay.ANIMATIONS.HUB_ON_SUCCESS);
+                PlayerInstanciationScript.playerAudio.PlayWinEffect();
+            }
 
             while (!LoadingOverlay.overlay.isIdle)
             {

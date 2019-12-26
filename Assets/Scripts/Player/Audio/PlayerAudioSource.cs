@@ -63,6 +63,11 @@ namespace Player.Audio
             transform.GetChild(2).GetComponent<AudioSource>().Play();
         }
 
+        internal void PlayWinEffect()
+        {
+            transform.GetChild(3).GetComponent<AudioSource>().Play();
+        }
+
 
     }
 }
