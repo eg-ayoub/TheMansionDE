@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3206762974298656866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -14091, y: -23745, z: 0}
-  m_LocalScale: {x: 0.41767, y: 0.41767, z: 0.41767}
+  m_LocalScale: {x: 0.6160148, y: 0.6160148, z: 0.6160148}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -113,10 +113,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
+  m_Mass: 0.025
   m_LinearDrag: 0
   m_AngularDrag: 2
-  m_GravityScale: 400
+  m_GravityScale: 500
   m_Material: {fileID: 6200000, guid: 3dff12ee0a22fc26aa44c709e412d0a6, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -134,4 +134,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0a6b194c7e9927e92c36ca20fc8fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kickForce: 0
+  kickForce: 4000
