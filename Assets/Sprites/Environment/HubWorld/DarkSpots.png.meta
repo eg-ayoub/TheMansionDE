@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: cd3a93fe052fe403ca5f3d8a0259d9a1
+guid: 3a56f44d0f63e45aaae37b0f65a5b0bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4385763097634990368
-    second: EntranceHub_0
+      213: -8237259872219686718
+    second: DarkSpots_0
+  - first:
+      213: 4181185569312939442
+    second: DarkSpots_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EntranceHub_0
+      name: DarkSpots_0
       rect:
         serializedVersion: 2
-        x: 129
-        y: 129
-        width: 420
-        height: 552
+        x: 263
+        y: 189
+        width: 1614
+        height: 1798
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,8 +130,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 613353b26b76d439fbe3343a7de99744
-      internalID: -4385763097634990368
+      spriteID: ad09f79cd7e2c4895be7952de227d411
+      internalID: -8237259872219686718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DarkSpots_1
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 0
+        width: 2331
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd037d882c8954c40b3a578ea7cfbea5
+      internalID: 4181185569312939442
       vertices: []
       indices: 
       edges: []
