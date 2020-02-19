@@ -375,7 +375,7 @@ namespace Management
             yield return null;
 
             // * 2 - play first part of the loading animation (hides the screen)
-            if (currentHandle.checkpoint == 0)
+            if (!currentHandle.isCheckpoint)
             {
                 LoadingOverlay.overlay.Play(LoadingOverlay.ANIMATIONS.NEXT_LEVEL);
             }
@@ -390,17 +390,26 @@ namespace Management
                 yield return null;
             }
 
-            if (currentHandle.checkpoint != 0)
+            if (currentHandle.isCheckpoint)
                 LoadingOverlay.overlay.DisplayWin();
 
             // * 3a - which scene do I load ?
-            int nextLevel = currentHandle.checkpoint != 0 ? 0 : currentHandle.buildIndex + 1;
+            int nextLevel = currentHandle.isCheckpoint ? 0 : currentHandle.buildIndex + 1;
 
             // * 3b - save the game if checkpoint
-            if (currentHandle.checkpoint != 0)
+            if (currentHandle.isCheckpoint)
             {
                 int time = timer.GetTime();
-                yield return StartCoroutine(saveManager.SaveCoroutine(currentHandle.checkpoint, timer.GetTime(), collectiblesInRun));
+                if (currentHandle is NormalHandle)
+                {
+                    NormalHandle handle = (NormalHandle)currentHandle;
+                    yield return StartCoroutine(saveManager.SaveCoroutineNormal(handle.checkpoint, timer.GetTime(), collectiblesInRun));
+                }
+                else
+                {
+                    MadnessHandle handle = (MadnessHandle)currentHandle;
+                    yield return StartCoroutine(saveManager.SaveCoroutineMadness(handle.checkpoint, timer.GetTime(), collectiblesInRun));
+                }
                 collectiblesInRun = 0;
             }
 

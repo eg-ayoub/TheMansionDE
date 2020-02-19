@@ -20,9 +20,9 @@ namespace Environment.HubWorld
         IEnumerator Decorate()
         {
             // * get times
-            SaveBlob blob = SaveManager.FetchTimes();
-            int[] times = blob.SaveTimes;
-            int[] collectibles = blob.SaveCollectibles;
+            SaveBlobV2 blob = SaveManager.FetchBlob();
+            int[] times = blob.NormalTimes;
+            int[] collectibles = blob.NormalCollectibles;
             yield return null;
 
             // * decorate UI under doors
@@ -41,6 +41,7 @@ namespace Environment.HubWorld
 
             // * decorate doors
             bool first = true;
+            bool allFinished = true;
             for (int i = 0; i < Constants.CHECKPOINT_COUNT; i++)
             {
                 HubDoor decorator = transform.GetChild(0).GetChild(i).GetComponent<HubDoor>();
@@ -49,10 +50,12 @@ namespace Environment.HubWorld
                     decorator.accessible = true;
                     decorator.finished = false;
                     first = false;
+                    allFinished = false;
                 }
                 else if (times[i] == -1)
                 {
                     decorator.accessible = false;
+                    allFinished = false;
                 }
                 else
                 {
@@ -62,6 +65,13 @@ namespace Environment.HubWorld
                 decorator.time = times[i];
                 decorator.Init();
             }
+            // * enable door to mansion of madness if all other are finished
+            if (allFinished)
+            {
+                // TODO : GetChild(0).GetChild(Constants.CHECKPOINT_COUNT).GetComponent<MirrorDoor>()
+            }
+
+
 
             // * disable hud features that are not needed in HUB world
             HudScript.hud.EnterHub();
