@@ -66,9 +66,13 @@ namespace Environment.HubWorld
                 decorator.Init();
             }
             // * enable door to mansion of madness if all other are finished
+            allFinished = true;
             if (allFinished)
             {
-                // TODO : GetChild(0).GetChild(Constants.CHECKPOINT_COUNT).GetComponent<MirrorDoor>()
+                Teleporter madnessTeleporter = transform.GetChild(0).GetChild(Constants.CHECKPOINT_COUNT).GetComponent<Teleporter>();
+                madnessTeleporter.accessible = true;
+                madnessTeleporter.Init();
+
             }
 
 

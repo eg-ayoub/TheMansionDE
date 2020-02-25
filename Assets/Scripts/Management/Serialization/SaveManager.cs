@@ -3,7 +3,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Collections;
 using System;
-
+using System.Runtime.Serialization;
 namespace Management.Serialization
 {
     // TODO : need complete overhaul of the save system.
@@ -53,11 +53,11 @@ namespace Management.Serialization
             SaveBlobV2 returnBlob;
             FileStream fileStream = File.Open(savepath, FileMode.Open);
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            object saveObject = binaryFormatter.Deserialize(fileStream);
-            fileStream.Close();
+            // object saveObject = binaryFormatter.Deserialize(fileStream);
             try
             {
-                SaveBlobV2 blob = (SaveBlobV2)saveObject;
+                SaveBlobV2 blob = (SaveBlobV2)binaryFormatter.Deserialize(fileStream);
+                fileStream.Close();
                 if (blob.version != Constants.SAVE_VER)
                 {
                     // * the save file has wrong version
@@ -79,12 +79,13 @@ namespace Management.Serialization
                     returnBlob = blob;
                 }
             }
-            catch (InvalidCastException)
+            catch (SerializationException)
             {
                 // * the file does not contain a saveblobV2
                 try
                 {
-                    SaveBlob blob = (SaveBlob)saveObject;
+                    SaveBlob blob = (SaveBlob)binaryFormatter.Deserialize(fileStream);
+                    fileStream.Close();
                     returnBlob = new SaveBlobV2();
                     returnBlob.InitEmpty();
                     for (int _ = 0; _ < Math.Min(blob.SaveTimes.Length, Constants.CHECKPOINT_COUNT); _++)
@@ -94,13 +95,14 @@ namespace Management.Serialization
                     }
 
                 }
-                catch (InvalidCastException)
+                catch (SerializationException)
                 {
                     // * the file does not coontain a saveblob(V1) either
                     returnBlob = new SaveBlobV2();
                     returnBlob.InitEmpty();
                 }
             }
+            fileStream.Close();
             fileStream = File.Create(savepath);
             binaryFormatter.Serialize(fileStream, returnBlob);
             fileStream.Close();
