@@ -24,9 +24,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7603309986447713653}
-  m_LocalRotation: {x: -0, y: 0, z: -1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 45091.617, y: -31210.379, z: 0}
-  m_LocalScale: {x: 2.6565, y: 2.6565, z: 2.6565}
+  m_LocalScale: {x: 2.6564999, y: 2.6564999, z: 2.6565}
   m_Children:
   - {fileID: 6450951826613089835}
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 696, y: 293}
   m_AdaptiveModeThreshold: 0.5
@@ -97,23 +97,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
         type: 3}
-      propertyPath: m_Offset.y
-      value: -174.38078
-      objectReference: {fileID: 0}
-    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 413.92203
-      objectReference: {fileID: 0}
-    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
-        type: 3}
       propertyPath: m_Offset.x
       value: 3286.0996
       objectReference: {fileID: 0}
     - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
         type: 3}
+      propertyPath: m_Offset.y
+      value: -174.38078
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
+        type: 3}
       propertyPath: m_Size.x
       value: 1544.1133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 413.92203
       objectReference: {fileID: 0}
     - target: {fileID: 6604352281607160341, guid: 120e793694cf0873da244ad9c25465d1,
         type: 3}
@@ -172,13 +172,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6604352281607160341, guid: 120e793694cf0873da244ad9c25465d1,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.45642757
+      propertyPath: m_LocalScale.x
+      value: 0.37643513
       objectReference: {fileID: 0}
     - target: {fileID: 6604352281607160341, guid: 120e793694cf0873da244ad9c25465d1,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.37643513
+      propertyPath: m_LocalScale.y
+      value: 0.45642757
       objectReference: {fileID: 0}
     - target: {fileID: 6604352281607160341, guid: 120e793694cf0873da244ad9c25465d1,
         type: 3}
