@@ -299,7 +299,7 @@ namespace Management
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
             PlayerInstanciationScript.player.Sleep();
-            FindObjectOfType<CinemachineVirtualCamera>().Follow = PlayerInstanciationScript.playerTransform;
+            // FindObjectOfType<CinemachineVirtualCamera>().Follow = PlayerInstanciationScript.playerTransform;
             // // * stop timer (we don't need it in hubworld)
             // timer.StopTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
@@ -466,6 +466,7 @@ namespace Management
                 yield return null;
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
+            if (nextLevel == 0) PlayerInstanciationScript.player.Sleep();
             PlayerInstanciationScript.movementModifier.ResetSensors();
             isLoading = false;
 

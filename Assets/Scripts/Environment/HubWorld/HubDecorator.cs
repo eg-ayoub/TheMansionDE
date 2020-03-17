@@ -66,13 +66,37 @@ namespace Environment.HubWorld
                 decorator.Init();
             }
             // * enable door to mansion of madness if all other are finished
-            allFinished = true;
+            // allFinished = true;
             if (allFinished)
             {
                 Teleporter madnessTeleporter = transform.GetChild(0).GetChild(Constants.CHECKPOINT_COUNT).GetComponent<Teleporter>();
                 madnessTeleporter.accessible = true;
                 madnessTeleporter.Init();
 
+            }
+
+            times = blob.MadnessTimes;
+            collectibles = blob.MadnessCollectibles;
+
+            for (int i = 0; i < times.Length; i++)
+            {
+                if (times[i] != -1)
+                {
+                    uIDecoration.DecorateDoor(Constants.CHECKPOINT_COUNT + i, times[i], collectibles[i]);
+                }
+                else
+                {
+                    uIDecoration.RemoveDecoration(Constants.CHECKPOINT_COUNT + i);
+                }
+            }
+
+            for (int i = 0; i < Constants.MADNESS_LEVEL_COUNT; i++)
+            {
+                HubDoor decorator = transform.GetChild(0).GetChild(Constants.CHECKPOINT_COUNT + i + 1).GetComponent<HubDoor>();
+                if (times[i] != -1) decorator.finished = true;
+                decorator.accessible = true;
+                decorator.time = times[i];
+                decorator.Init();
             }
 
 

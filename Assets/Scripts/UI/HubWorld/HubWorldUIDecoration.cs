@@ -14,7 +14,11 @@ namespace UI.HubWorld
             transform.GetChild(1).gameObject,
             transform.GetChild(2).gameObject,
             transform.GetChild(3).gameObject,
-            transform.GetChild(4).gameObject
+            transform.GetChild(4).gameObject,
+            transform.GetChild(5).gameObject,
+            transform.GetChild(6).gameObject,
+            transform.GetChild(7).gameObject,
+            transform.GetChild(8).gameObject,
         };
         }
 
