@@ -33,6 +33,8 @@ namespace Environment.Hazards
                 particles.Play();
                 source.Play();
 
+                yield return null;
+
                 while (particles.particleCount != 0)
                 {
                     // * cast from 3 different positions
