@@ -4879,6 +4879,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
+  forgetDistance: 5000
+  speedupDistance: 2000
+  slowdownDistance: 1000
+  attachDistance: 500
+  slowSpeedMultiplier: 1
+  fastSpeedMultiplier: 2
 --- !u!58 &8942563431840423796
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4977,21 +4983,21 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b35e98b8e70d2d4c6bfeb3deef402583, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.382
+  m_Pitch: 0.3
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 166
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
-  BypassEffects: 0
+  BypassEffects: 1
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
