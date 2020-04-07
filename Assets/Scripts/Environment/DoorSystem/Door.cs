@@ -12,10 +12,12 @@ namespace Environment.DoorSystem
 
         private void Update()
         {
+#if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.S))
             {
                 GameManagerScript.gameManager.Next();
             }
+#endif
         }
 
         private void Start()

@@ -5,6 +5,7 @@ public class Constants
     public const int CHECKPOINT_COUNT = 5;
     public const int MADNESS_LEVEL_COUNT = 4;
     public const int SAVE_VER = 1;
+    public const float COYOTE_TIME = .17f;
 }
 public enum DIRECTION { LEFT, RIGHT };
 public enum NORMAL_CHECKPOINT

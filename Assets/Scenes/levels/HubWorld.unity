@@ -12261,7 +12261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b79d1419f430784a806aa8171396c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mansionOfMadness: 0
+  mansionOfMadness: 1
   accessibleSprite: {fileID: -8018026195631638036, guid: 93757d700930808209111dd2c0daafca,
     type: 3}
   inaccessibleSprite: {fileID: 0}
@@ -20846,7 +20846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b79d1419f430784a806aa8171396c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mansionOfMadness: 0
+  mansionOfMadness: 1
   accessibleSprite: {fileID: -8018026195631638036, guid: 93757d700930808209111dd2c0daafca,
     type: 3}
   inaccessibleSprite: {fileID: 0}
@@ -27022,7 +27022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b79d1419f430784a806aa8171396c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mansionOfMadness: 0
+  mansionOfMadness: 1
   accessibleSprite: {fileID: -8018026195631638036, guid: 93757d700930808209111dd2c0daafca,
     type: 3}
   inaccessibleSprite: {fileID: 0}
@@ -48292,7 +48292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b79d1419f430784a806aa8171396c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mansionOfMadness: 0
+  mansionOfMadness: 1
   accessibleSprite: {fileID: -8018026195631638036, guid: 93757d700930808209111dd2c0daafca,
     type: 3}
   inaccessibleSprite: {fileID: 0}

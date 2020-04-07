@@ -13,6 +13,7 @@ namespace Player.Health
     public class PlayerHealthManager : GameplayObject
     {
         bool immune;
+        bool inMadness;
         /// <summary>
         /// current HP value
         /// </summary>
@@ -25,24 +26,23 @@ namespace Player.Health
         // Update is called once per frame
         public void TakeDamage()
         {
-            Debug.Log("->TakeDamage");
             if (!immune)
             {
-                Debug.Log("\t->Not Immune");
                 immune = true;
                 if (HP == 1)
                 {
-                    Debug.Log("\t\t->Game over");
                     PlayerInstanciationScript.playerAudio.PlayDeathEffect();
                     GameManagerScript.gameManager.ReturnToMain(false);
                 }
                 else
                 {
-                    Debug.Log("\t\t->Restart");
-                    HP -= 1;
+                    if (!inMadness)
+                    {
+                        HP -= 1;
+                        HudScript.hud.UpdateHP(HP);
+                    }
                     // if (!paused)
                     // {
-                    HudScript.hud.UpdateHP(HP);
                     // }
                     GameManagerScript.gameManager.RestartLevel();
                 }
@@ -54,9 +54,15 @@ namespace Player.Health
 
         public void ResetImmunity()
         {
-            Debug.Log("\t<-Immunity reset");
             immune = false;
         }
+
+        public void SetMadness(bool m)
+        {
+            Debug.Log("inMadness set to : " + m);
+            inMadness = m;
+        }
+
 
         // IEnumerator ResetImmunity()
         // {
