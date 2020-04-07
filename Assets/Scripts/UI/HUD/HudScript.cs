@@ -36,6 +36,11 @@ namespace UI.HUD
             hPDisplay.UpdateHP(HP);
         }
 
+        public void MansionHP()
+        {
+            hPDisplay.Mansion();
+        }
+
         public void UpdateKeyStatus(bool status)
         {
             keyStatusDisplay.UpdateKeyStatus(status);

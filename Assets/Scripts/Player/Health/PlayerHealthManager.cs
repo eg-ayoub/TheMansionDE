@@ -61,6 +61,14 @@ namespace Player.Health
         {
             Debug.Log("inMadness set to : " + m);
             inMadness = m;
+            if (m)
+            {
+                HudScript.hud.MansionHP();
+            }
+            else
+            {
+                HudScript.hud.UpdateHP(HP);
+            }
         }
 
 

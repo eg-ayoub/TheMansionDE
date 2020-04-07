@@ -8,6 +8,7 @@ namespace UI.HUD
     {
         public Sprite on;
         public Sprite off;
+        public Sprite mansion;
         Image image;
         private void Start()
         {
@@ -29,6 +30,18 @@ namespace UI.HUD
             else
             {
                 image.sprite = off;
+            }
+        }
+
+        public void Mansion()
+        {
+            if (mansion == null)
+            {
+                image.color = new Color(.1f, .1f, .1f, 0);
+            }
+            else
+            {
+                image.sprite = mansion;
             }
         }
     }
