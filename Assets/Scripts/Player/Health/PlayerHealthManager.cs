@@ -25,38 +25,48 @@ namespace Player.Health
         // Update is called once per frame
         public void TakeDamage()
         {
+            Debug.Log("->TakeDamage");
             if (!immune)
             {
+                Debug.Log("\t->Not Immune");
                 immune = true;
                 if (HP == 1)
                 {
+                    Debug.Log("\t\t->Game over");
                     PlayerInstanciationScript.playerAudio.PlayDeathEffect();
                     GameManagerScript.gameManager.ReturnToMain(false);
                 }
                 else
                 {
+                    Debug.Log("\t\t->Restart");
                     HP -= 1;
-                    if (!paused)
-                    {
-                        HudScript.hud.UpdateHP(HP);
-                    }
+                    // if (!paused)
+                    // {
+                    HudScript.hud.UpdateHP(HP);
+                    // }
                     GameManagerScript.gameManager.RestartLevel();
                 }
                 CameraShaker shaker = FindObjectOfType<CameraShaker>();
                 if (shaker) shaker.Shake();
-                StartCoroutine(ResetImmunity());
+                // StartCoroutine(ResetImmunity());
             }
         }
 
-        IEnumerator ResetImmunity()
+        public void ResetImmunity()
         {
-            for (int i = 0; i < 10; i++)
-            {
-                yield return null;
-            }
+            Debug.Log("\t<-Immunity reset");
             immune = false;
-            yield return null;
         }
+
+        // IEnumerator ResetImmunity()
+        // {
+        //     for (int i = 0; i < 10; i++)
+        //     {
+        //         yield return null;
+        //     }
+        //     immune = false;
+        //     yield return null;
+        // }
         /// <summary>
         /// restores 'health' amount of points to player's HP
         /// </summary>

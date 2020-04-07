@@ -228,6 +228,7 @@ namespace Management
             HudScript.hud.ExitHub();
             timer.StartTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
             isLoading = false;
         }
 
@@ -303,6 +304,7 @@ namespace Management
             // // * stop timer (we don't need it in hubworld)
             // timer.StopTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
             isLoading = false;
         }
 
@@ -363,6 +365,7 @@ namespace Management
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
             isLoading = false;
 
         }
@@ -468,6 +471,7 @@ namespace Management
             PlayerInstanciationScript.clipManager.UnFreeze();
             if (nextLevel == 0) PlayerInstanciationScript.player.Sleep();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
             isLoading = false;
 
         }
