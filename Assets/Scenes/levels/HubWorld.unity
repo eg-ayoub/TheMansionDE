@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1220,7 +1220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 877623098}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &55850560
 SpriteRenderer:
@@ -13990,7 +13990,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 877623098}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &579075298
 SpriteRenderer:
@@ -14330,7 +14330,7 @@ Transform:
   m_LocalScale: {x: 0.8800001, y: 0.8800001, z: 0.8800001}
   m_Children: []
   m_Father: {fileID: 877623098}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &613878672
 SpriteRenderer:
@@ -17324,7 +17324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 703800906}
   m_Layer: 8
-  m_Name: Pumpkine
+  m_Name: Pumpkines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21087,6 +21087,7 @@ Transform:
   m_LocalPosition: {x: -1392.9365, y: -375.4013, z: 0}
   m_LocalScale: {x: 0.8232485, y: 0.8232485, z: 0.8232485}
   m_Children:
+  - {fileID: 1204276615}
   - {fileID: 1298899808}
   - {fileID: 55850559}
   - {fileID: 579075297}
@@ -29330,11 +29331,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204276613}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81940, y: -45128, z: 0}
+  m_LocalPosition: {x: 22815, y: -45604.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 877623098}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205195421
 GameObject:
@@ -32028,7 +32029,7 @@ Transform:
   m_LocalScale: {x: 2.8952298, y: 2.8952298, z: 2.8952298}
   m_Children: []
   m_Father: {fileID: 877623098}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1298899809
 SpriteRenderer:
@@ -39233,7 +39234,7 @@ Transform:
   m_LocalScale: {x: 0.37015867, y: 0.37015867, z: 0.37015867}
   m_Children: []
   m_Father: {fileID: 877623098}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1580006872
 SpriteRenderer:
@@ -53013,6 +53014,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5652224229938735260, guid: 7f416c96fbb7ba84782728c775596bef,
+        type: 3}
+      propertyPath: mansionSoundtrack
+      value: 
+      objectReference: {fileID: 8300000, guid: ce20a8c1985fa4387bdaa1e52080ff2d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f416c96fbb7ba84782728c775596bef, type: 3}
 --- !u!4 &5067769845628471305 stripped
