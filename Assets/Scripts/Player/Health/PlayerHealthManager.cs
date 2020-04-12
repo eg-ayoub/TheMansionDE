@@ -13,6 +13,7 @@ namespace Player.Health
     public class PlayerHealthManager : GameplayObject
     {
         bool immune;
+        bool inMadness;
         /// <summary>
         /// current HP value
         /// </summary>
@@ -35,28 +36,51 @@ namespace Player.Health
                 }
                 else
                 {
-                    HP -= 1;
-                    if (!paused)
+                    if (!inMadness)
                     {
+                        HP -= 1;
                         HudScript.hud.UpdateHP(HP);
                     }
+                    // if (!paused)
+                    // {
+                    // }
                     GameManagerScript.gameManager.RestartLevel();
                 }
                 CameraShaker shaker = FindObjectOfType<CameraShaker>();
                 if (shaker) shaker.Shake();
-                StartCoroutine(ResetImmunity());
+                // StartCoroutine(ResetImmunity());
             }
         }
 
-        IEnumerator ResetImmunity()
+        public void ResetImmunity()
         {
-            for (int i = 0; i < 10; i++)
-            {
-                yield return null;
-            }
             immune = false;
-            yield return null;
         }
+
+        public void SetMadness(bool m)
+        {
+            Debug.Log("inMadness set to : " + m);
+            inMadness = m;
+            if (m)
+            {
+                HudScript.hud.MansionHP();
+            }
+            else
+            {
+                HudScript.hud.UpdateHP(HP);
+            }
+        }
+
+
+        // IEnumerator ResetImmunity()
+        // {
+        //     for (int i = 0; i < 10; i++)
+        //     {
+        //         yield return null;
+        //     }
+        //     immune = false;
+        //     yield return null;
+        // }
         /// <summary>
         /// restores 'health' amount of points to player's HP
         /// </summary>

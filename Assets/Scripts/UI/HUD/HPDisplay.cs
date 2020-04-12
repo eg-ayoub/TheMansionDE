@@ -12,6 +12,15 @@ namespace UI.HUD
                 indicators[i] = transform.GetChild(i).GetComponent<ImageIndicator>();
             }
         }
+
+        public void Mansion()
+        {
+            for (int i = 0; i < Constants.PLAYER_MAX_HP; i++)
+            {
+                indicators[i].Mansion();
+            }
+        }
+
         public void UpdateHP(int HP)
         {
             for (int i = 0; i < Constants.PLAYER_MAX_HP; i++)

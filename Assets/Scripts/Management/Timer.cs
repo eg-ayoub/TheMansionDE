@@ -29,11 +29,11 @@ namespace Management
 
         private void FixedUpdate()
         {
+            int deltaTime = (int)(1000 * Time.time) - now;
+            now = (int)(1000 * Time.time);
             if (!paused)
             {
-                time += (int)(1000 * Time.time) - now;
-                now = (int)(1000 * Time.time);
-
+                time += deltaTime;
                 HudScript.hud.UpdateTimer(time);
             }
         }

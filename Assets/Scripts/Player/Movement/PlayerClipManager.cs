@@ -149,11 +149,13 @@ namespace Player
 
             public void UnFreeze()
             {
+                playerPhysics.SetRealDeltaPosition(Vector2.zero);
                 frozen = false;
             }
 
             public void Freeze()
             {
+                playerPhysics.SetRealDeltaPosition(Vector2.zero);
                 frozen = true;
             }
         }

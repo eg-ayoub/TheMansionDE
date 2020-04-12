@@ -281,10 +281,11 @@ namespace Player
             IEnumerator JumpTimeInOut()
             {
                 jumpTimingIn = true;
-                for (int i = 0; i < 5; i++)
-                {
-                    yield return null;
-                }
+                // for (int i = 0; i < Constants.COYOTE_TIME; i++)
+                // {
+                //     yield return null;
+                // }
+                yield return new WaitForSecondsRealtime(Constants.COYOTE_TIME);
                 jumpTimingIn = false;
             }
 

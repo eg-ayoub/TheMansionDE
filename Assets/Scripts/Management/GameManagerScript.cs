@@ -161,9 +161,18 @@ namespace Management
             }
         }
 
+        IEnumerator WaitForPause()
+        {
+            while (paused)
+            {
+                yield return null;
+            }
+        }
+
         IEnumerator EnterLevel(int index, bool mansion)
         {
             // * 1 - pause all gameObjects
+            yield return StartCoroutine(WaitForPause());
             ToggleGamePaused();
             LockPause();
             yield return null;
@@ -228,12 +237,15 @@ namespace Management
             HudScript.hud.ExitHub();
             timer.StartTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
+            PlayerInstanciationScript.hpManager.SetMadness(mansion);
             isLoading = false;
         }
 
         IEnumerator HubReturn(bool fromMenu)
         {
             // * 1 - pause all gameObjects
+            yield return StartCoroutine(WaitForPause());
             ToggleGamePaused();
             LockPause();
             yield return null;
@@ -303,12 +315,15 @@ namespace Management
             // // * stop timer (we don't need it in hubworld)
             // timer.StopTimer();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
+            PlayerInstanciationScript.hpManager.SetMadness(false);
             isLoading = false;
         }
 
         IEnumerator LevelRestart()
         {
             // * 1 - pause all gameObjects
+            yield return StartCoroutine(WaitForPause());
             ToggleGamePaused();
             LockPause();
             yield return null;
@@ -363,6 +378,7 @@ namespace Management
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
             isLoading = false;
 
         }
@@ -370,6 +386,7 @@ namespace Management
         IEnumerator NextLevel()
         {
             // * 1 - pause all gameObjects
+            yield return StartCoroutine(WaitForPause());
             ToggleGamePaused();
             LockPause();
             yield return null;
@@ -468,6 +485,8 @@ namespace Management
             PlayerInstanciationScript.clipManager.UnFreeze();
             if (nextLevel == 0) PlayerInstanciationScript.player.Sleep();
             PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
+            PlayerInstanciationScript.hpManager.SetMadness(false);
             isLoading = false;
 
         }
