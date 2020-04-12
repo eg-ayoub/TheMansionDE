@@ -6,6 +6,9 @@ namespace Environment.Enemies
 {
     public class CrawlerBehaviour : GameplayObject
     {
+
+        AudioSource audioSource;
+
         Animator animator;
         public enum CDIRECTION
         {
@@ -39,6 +42,8 @@ namespace Environment.Enemies
             skinX -= rectangle.B.x;
             skinY -= rectangle.B.y;
             transform.GetChild(1).localScale = new Vector3((int)direction, 1, 1);
+
+            audioSource = GetComponentInChildren<AudioSource>();
         }
 
         private void Update()
@@ -50,12 +55,17 @@ namespace Environment.Enemies
                 rectangle.Reset(box, skinWidth);
                 if (!groundSensor.GetState())
                 {
+                    audioSource.Pause();
                     animator.SetTrigger("Fall");
                     speed += gravity * Time.deltaTime * Vector2.down;
                     speed.x = 0;
                 }
                 else
                 {
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.Play();
+                    }
                     animator.SetTrigger("Crawl");
                     speed.y = 0;
                     speed.x = ((int)direction) * crawlSpeed;
