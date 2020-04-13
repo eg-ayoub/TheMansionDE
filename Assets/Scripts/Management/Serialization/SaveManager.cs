@@ -14,6 +14,9 @@ namespace Management.Serialization
 
     public class SaveManager : MonoBehaviour
     {
+
+        bool isGameOver;
+
         static string savepath;
 
         private void Start()
@@ -166,6 +169,31 @@ namespace Management.Serialization
         {
             DoCheckFileAndCreate();
             return DoCheckVersionAndRectify();
+        }
+
+        public bool GetIsGameOver()
+        {
+            return isGameOver;
+        }
+
+        public IEnumerator CheckIsGameOver(MADNESS_CHECKPOINT check)
+        {
+            DoCheckFileAndCreate();
+            yield return null;
+            SaveBlobV2 saveBlob = DoCheckVersionAndRectify();
+            isGameOver = true;
+            for (int c = 0; c < saveBlob.MadnessTimes.Length; c++)
+            {
+                if (c != (int)check && saveBlob.MadnessTimes[c] == -1)
+                {
+                    isGameOver = false;
+                }
+            }
+            if (saveBlob.MadnessTimes[(int)check] != -1)
+            {
+                isGameOver = false;
+            }
+            yield return null;
         }
     }
 }

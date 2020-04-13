@@ -27,6 +27,9 @@ namespace Environment.HubWorld
                 mLight.enabled = false;
             }
 
+            Light2D pLight = transform.GetChild(6).GetComponentInChildren<Light2D>();
+            pLight.enabled = false;
+
             // transform.GetChild(4).GetChild(1).GetComponent<SpriteRenderer>().sprite = candleOff;
 
             // foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
@@ -78,6 +81,9 @@ namespace Environment.HubWorld
             {
                 mLight.enabled = true;
             }
+
+            Light2D pLight = transform.GetChild(6).GetComponentInChildren<Light2D>();
+            pLight.enabled = true;
         }
     }
 }

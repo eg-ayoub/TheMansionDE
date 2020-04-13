@@ -18,7 +18,7 @@ namespace Management
     /// </summary>
     public class GameManagerScript : MonoBehaviour
     {
-        bool isLoading;
+        public bool isLoading;
         /// <summary>
         /// game manager singleton
         /// </summary>
@@ -156,7 +156,7 @@ namespace Management
         {
             if (!isLoading)
             {
-                StartCoroutine(NextLevel());
+                StartCoroutine(PreNextLevel());
                 isLoading = true;
             }
         }
@@ -251,7 +251,7 @@ namespace Management
             yield return null;
 
             // * 2 - play first part of the loading animation (hides the screen)
-            LoadingOverlay.overlay.Play(LoadingOverlay.ANIMATIONS.GAME_OVER);
+            LoadingOverlay.overlay.Play(LoadingOverlay.ANIMATIONS.DEATH);
             while (!LoadingOverlay.overlay.isIdle)
             {
                 yield return null;
@@ -383,15 +383,63 @@ namespace Management
 
         }
 
-        IEnumerator NextLevel()
+        IEnumerator PreNextLevel()
         {
+
             // * 1 - pause all gameObjects
             yield return StartCoroutine(WaitForPause());
             ToggleGamePaused();
             LockPause();
             yield return null;
 
-            // * 2 - play first part of the loading animation (hides the screen)
+            // * 2 is this GameOver ? 
+            if (currentHandle is MadnessHandle)
+            {
+                MadnessHandle handle = (MadnessHandle)currentHandle;
+                yield return StartCoroutine(saveManager.CheckIsGameOver(handle.checkpoint));
+                if (saveManager.GetIsGameOver())
+                {
+                    yield return StartCoroutine(GameOver());
+                }
+                else
+                {
+                    yield return StartCoroutine(NextLevel());
+                }
+            }
+            else
+            {
+                yield return StartCoroutine(NextLevel());
+            }
+
+            // * 8 resume all gameObjects
+            UnLockPause();
+            ToggleGamePaused();
+            yield return null;
+
+
+            // * 9 set some UI stuff
+            HudScript.hud.UpdateKeyStatus(false);
+
+            // * 10 freeze player and reset controls for 10 frames
+            PlayerInstanciationScript.clipManager.Freeze();
+            for (int _ = 0; _ < 10; _++)
+            {
+                KeyMapper.ResetAll();
+                yield return null;
+            }
+            PlayerInstanciationScript.clipManager.UnFreeze();
+            if (currentHandle.isCheckpoint) PlayerInstanciationScript.player.Sleep();
+            PlayerInstanciationScript.movementModifier.ResetSensors();
+            PlayerInstanciationScript.hpManager.ResetImmunity();
+            PlayerInstanciationScript.hpManager.SetMadness(false);
+            isLoading = false;
+
+        }
+
+        IEnumerator NextLevel()
+        {
+
+            // * 3 - play first part of the loading animation (hides the screen)
             if (!currentHandle.isCheckpoint)
             {
                 LoadingOverlay.overlay.Play(LoadingOverlay.ANIMATIONS.NEXT_LEVEL);
@@ -410,10 +458,10 @@ namespace Management
             if (currentHandle.isCheckpoint)
                 LoadingOverlay.overlay.DisplayWin();
 
-            // * 3a - which scene do I load ?
+            // * 4a - which scene do I load ?
             int nextLevel = currentHandle.isCheckpoint ? 0 : currentHandle.buildIndex + 1;
 
-            // * 3b - save the game if checkpoint
+            // * 4b - save the game if checkpoint
             if (currentHandle.isCheckpoint)
             {
                 int time = timer.GetTime();
@@ -433,24 +481,24 @@ namespace Management
             // * pause audio
             if (nextLevel == 0) PlayerInstanciationScript.playerAudio.Pause();
 
-            // * 3c - wait for scene to load
+            // * 4c - wait for scene to load
             AsyncOperation levelLoad = SceneManager.LoadSceneAsync(nextLevel, LoadSceneMode.Single);
             while (!levelLoad.isDone)
             {
                 yield return null;
             }
 
-            // * 4 - query new scene handle
+            // * 5 - query new scene handle
             currentHandle = FindObjectOfType<LevelHandle>();
             yield return null;
 
-            // * 5 - put player in spawnpoint
+            // * 6 - put player in spawnpoint
             PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
             PlayerInstanciationScript.movementModifier.ResetSensors();
 
             yield return null;
 
-            // * 5b - reset player HP 
+            // * 6b - reset player HP 
             PlayerInstanciationScript.hpManager.ResetHP();
             if (nextLevel == 0)
             {
@@ -458,7 +506,7 @@ namespace Management
             }
             LoadingOverlay.overlay.RemoveIndicators();
 
-            // * 6 - play second part of loading animation (shows screen)
+            // * 7 - play second part of loading animation (shows screen)
             LoadingOverlay.overlay.Resume();
             while (!LoadingOverlay.overlay.isDone)
             {
@@ -466,28 +514,61 @@ namespace Management
             }
             LoadingOverlay.overlay.Reset();
 
-            // * 7 - resume all gameObjects
-            UnLockPause();
-            ToggleGamePaused();
-            yield return null;
+        }
 
+        IEnumerator GameOver()
+        {
+            // * 3 play 1st part of the loading anim
+            LoadingOverlay.overlay.Play(LoadingOverlay.ANIMATIONS.GAME_OVER);
 
-            // * 7b set some UI stuff
-            HudScript.hud.UpdateKeyStatus(false);
-
-            // * 8 - freeze player and reset controls for 10 frames
-            PlayerInstanciationScript.clipManager.Freeze();
-            for (int _ = 0; _ < 10; _++)
+            while (!LoadingOverlay.overlay.isIdle)
             {
-                KeyMapper.ResetAll();
                 yield return null;
             }
-            PlayerInstanciationScript.clipManager.UnFreeze();
-            if (nextLevel == 0) PlayerInstanciationScript.player.Sleep();
+
+            // * 4a save
+            MadnessHandle handle = (MadnessHandle)currentHandle;
+            yield return StartCoroutine(saveManager.SaveCoroutineMadness(handle.checkpoint, timer.GetTime(), collectiblesInRun));
+            collectiblesInRun = 0;
+
+            // * 4b mute audio
+            PlayerInstanciationScript.playerAudio.Pause();
+
+            // * 4c wait for scene to load
+            AsyncOperation levelLoad = SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+            while (!levelLoad.isDone)
+            {
+                yield return null;
+            }
+
+            // * 4d wait for cinematic
+            while (!LoadingOverlay.overlay.idlingDone)
+            {
+                yield return null;
+            }
+
+            // * 5 - query new scene handle
+            currentHandle = FindObjectOfType<LevelHandle>();
+            yield return null;
+
+            // * 6 - put player in spawnpoint
+            PlayerInstanciationScript.playerTransform.position = currentHandle.spawnpoint.position;
             PlayerInstanciationScript.movementModifier.ResetSensors();
-            PlayerInstanciationScript.hpManager.ResetImmunity();
-            PlayerInstanciationScript.hpManager.SetMadness(false);
-            isLoading = false;
+
+            yield return null;
+
+            // * 6b - reset player HP 
+            PlayerInstanciationScript.hpManager.ResetHP();
+            yield return new WaitForSeconds(2f);
+            LoadingOverlay.overlay.RemoveIndicators();
+
+            // * 7 - play second part of loading animation (shows screen)
+            LoadingOverlay.overlay.Resume();
+            while (!LoadingOverlay.overlay.isDone)
+            {
+                yield return null;
+            }
+            LoadingOverlay.overlay.Reset();
 
         }
 
