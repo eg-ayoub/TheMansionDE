@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1121,24 +1121,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2141497640, guid: 335922349aab42f03987de659d2f3ab4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2141497640, guid: 335922349aab42f03987de659d2f3ab4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014600654531865106, guid: 335922349aab42f03987de659d2f3ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 4692
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014600654531865106, guid: 335922349aab42f03987de659d2f3ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1003
-      objectReference: {fileID: 0}
     - target: {fileID: 4536545438152277409, guid: 335922349aab42f03987de659d2f3ab4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1177,7 +1159,7 @@ PrefabInstance:
     - target: {fileID: 4536545438152277409, guid: 335922349aab42f03987de659d2f3ab4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4536545438152277409, guid: 335922349aab42f03987de659d2f3ab4,
         type: 3}
@@ -1198,16 +1180,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4536545438839616959, guid: 335922349aab42f03987de659d2f3ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 13939
-      objectReference: {fileID: 0}
-    - target: {fileID: 4536545438839616959, guid: 335922349aab42f03987de659d2f3ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 335922349aab42f03987de659d2f3ab4, type: 3}
@@ -1701,7 +1673,7 @@ Transform:
   - {fileID: 2101469306}
   - {fileID: 2020005092}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1999451169
 PrefabInstance:
