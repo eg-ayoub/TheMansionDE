@@ -8,7 +8,7 @@ public abstract class GameplayObject : MonoBehaviour
         Animator animator = GetComponent<Animator>();
         if (animator)
         {
-            animator.speed = 0;
+            animator.speed = 0f;
         }
         paused = true;
     }

@@ -56,8 +56,8 @@ namespace Environment.HubWorld
             {
                 float distance = transform.position.x - PlayerInstanciationScript.playerTransform.position.x;
                 distance = Mathf.Abs(distance);
-                distance = Mathf.Clamp(distance, 100, 1000);
-                distance = Mathf.InverseLerp(100, 1000, distance);
+                distance = Mathf.Clamp(distance, 100, Constants.INDICATOR_THRESHOLD_DISTANCE);
+                distance = Mathf.InverseLerp(100, Constants.INDICATOR_THRESHOLD_DISTANCE, distance);
                 indicator.color = new Color(1, 1, 1, 1 - distance);
             }
             else

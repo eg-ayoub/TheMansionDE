@@ -538,7 +538,7 @@ RectTransform:
   m_GameObject: {fileID: 3580853137089907218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 7615469232500751408}
   m_RootOrder: 6
@@ -784,6 +784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isIdle: 0
+  idlingDone: 0
   isDone: 0
   deathSprite: {fileID: 7730311541818379953, guid: e5e66440188d1ebceb771a4690f56ff5,
     type: 3}
