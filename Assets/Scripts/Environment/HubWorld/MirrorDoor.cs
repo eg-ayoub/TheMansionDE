@@ -42,7 +42,9 @@ namespace Environment.HubWorld
         {
             if (teleporter.accessible)
             {
-                float distance = transform.position.x - PlayerInstanciationScript.playerTransform.position.x;
+                Vector2 _distance = transform.position - PlayerInstanciationScript.playerTransform.position;
+                //float distance = transform.position.x - PlayerInstanciationScript.playerTransform.position.x;
+                float distance = _distance.magnitude;
                 distance = Mathf.Abs(distance);
                 distance = Mathf.Clamp(distance, 100, Constants.INDICATOR_THRESHOLD_DISTANCE);
                 distance = Mathf.InverseLerp(100, Constants.INDICATOR_THRESHOLD_DISTANCE, distance);

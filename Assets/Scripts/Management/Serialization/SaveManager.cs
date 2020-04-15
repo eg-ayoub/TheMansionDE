@@ -22,6 +22,8 @@ namespace Management.Serialization
         private void Start()
         {
             savepath = Application.persistentDataPath + "/save.gd";
+            Debug.Log(savepath);
+
         }
 
         /// <summary>
