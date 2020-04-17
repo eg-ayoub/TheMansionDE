@@ -6,6 +6,9 @@ namespace UI.Loading
 {
     public class LoadingOverlay : MonoBehaviour
     {
+
+        AudioSource audioSource;
+
         public enum ANIMATIONS
         {
             NONE = 0,
@@ -43,6 +46,7 @@ namespace UI.Loading
         }
         private void Start()
         {
+            audioSource = GetComponentInChildren<AudioSource>();
             animator = GetComponent<Animator>();
             overlayMessage = GetComponentInChildren<Text>();
             overlayMessageDesc = transform.GetChild(6).GetComponent<Image>();
@@ -97,6 +101,7 @@ namespace UI.Loading
 
         internal void DisplayWin()
         {
+            audioSource.Play();
             overlayMessageDesc.sprite = winSprite;
             overlayMessageDesc.color = Color.white;
         }

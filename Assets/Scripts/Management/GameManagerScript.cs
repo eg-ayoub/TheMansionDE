@@ -428,7 +428,7 @@ namespace Management
                 yield return null;
             }
             PlayerInstanciationScript.clipManager.UnFreeze();
-            if (currentHandle.isCheckpoint) PlayerInstanciationScript.player.Sleep();
+            if (currentHandle.buildIndex == 0) PlayerInstanciationScript.player.Sleep();
             PlayerInstanciationScript.movementModifier.ResetSensors();
             PlayerInstanciationScript.hpManager.ResetImmunity();
             PlayerInstanciationScript.hpManager.SetMadness(false);

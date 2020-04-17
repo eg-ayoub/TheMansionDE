@@ -4,11 +4,15 @@ namespace Environment.Portals
 {
     public class PortalGate : GameplayObject
     {
+
+        AudioSource audioSource;
+
         private WormHole wormHole;
 
         public bool active = true;
         public PortalGate Init(WormHole wormHole)
         {
+            audioSource = GetComponent<AudioSource>();
             this.wormHole = wormHole;
             return this;
         }
@@ -17,6 +21,7 @@ namespace Environment.Portals
         {
             if (active && !paused && other.CompareTag("Player"))
             {
+                audioSource.Play();
                 GetComponent<ParticleSystem>().Play();
                 wormHole.Warp(this);
             }
