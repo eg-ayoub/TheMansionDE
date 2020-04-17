@@ -422,6 +422,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4642492577089495764, guid: 1005e697993f7861398b101be19b66b5,
+        type: 3}
+      propertyPath: buildIndex
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4642492577089495764, guid: 1005e697993f7861398b101be19b66b5,
+        type: 3}
+      propertyPath: checkpoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4642492577089495765, guid: 1005e697993f7861398b101be19b66b5,
         type: 3}
       propertyPath: m_Name
@@ -491,16 +501,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 735
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642492577089495764, guid: 1005e697993f7861398b101be19b66b5,
-        type: 3}
-      propertyPath: buildIndex
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 4642492577089495764, guid: 1005e697993f7861398b101be19b66b5,
-        type: 3}
-      propertyPath: checkpoint
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1005e697993f7861398b101be19b66b5, type: 3}
@@ -582,7 +582,7 @@ SpriteRenderer:
   m_Size: {x: 3256, y: 1699.543}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &636909796
@@ -892,10 +892,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4536545438152277413, guid: 335922349aab42f03987de659d2f3ab4,
+    - target: {fileID: 2014600654531865106, guid: 335922349aab42f03987de659d2f3ab4,
         type: 3}
-      propertyPath: m_Name
-      value: Door
+      propertyPath: m_LocalPosition.y
+      value: 5353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014600654531865106, guid: 335922349aab42f03987de659d2f3ab4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5780
       objectReference: {fileID: 0}
     - target: {fileID: 4536545438152277409, guid: 335922349aab42f03987de659d2f3ab4,
         type: 3}
@@ -952,6 +957,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4536545438152277413, guid: 335922349aab42f03987de659d2f3ab4,
+        type: 3}
+      propertyPath: m_Name
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 4536545438839616959, guid: 335922349aab42f03987de659d2f3ab4,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -961,16 +971,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 4904
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014600654531865106, guid: 335922349aab42f03987de659d2f3ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5275
-      objectReference: {fileID: 0}
-    - target: {fileID: 2014600654531865106, guid: 335922349aab42f03987de659d2f3ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1030
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 335922349aab42f03987de659d2f3ab4, type: 3}
@@ -1318,6 +1318,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkine (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3834646448338308241, guid: 57d3ea49bf5134f3cb249e8b766979d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 204
+      objectReference: {fileID: 0}
     - target: {fileID: 4919249277192251002, guid: 57d3ea49bf5134f3cb249e8b766979d7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1372,11 +1377,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3834646448338308241, guid: 57d3ea49bf5134f3cb249e8b766979d7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 204
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57d3ea49bf5134f3cb249e8b766979d7, type: 3}
@@ -1464,6 +1464,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Deadzone
       objectReference: {fileID: 0}
+    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 4828.0283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 46902.71
+      objectReference: {fileID: 0}
     - target: {fileID: 6604352281607160341, guid: 120e793694cf0873da244ad9c25465d1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1518,16 +1528,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 4828.0283
-      objectReference: {fileID: 0}
-    - target: {fileID: 6604352281607160339, guid: 120e793694cf0873da244ad9c25465d1,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 46902.71
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 120e793694cf0873da244ad9c25465d1, type: 3}

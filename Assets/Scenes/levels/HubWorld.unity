@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1045,7 +1045,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42757799}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 194, z: 0}
+  m_LocalPosition: {x: 0, y: 336, z: 0}
   m_LocalScale: {x: 0.14281373, y: 0.14281373, z: 0.42844117}
   m_Children: []
   m_Father: {fileID: 885916466}
@@ -15705,7 +15705,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675679661}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 194.00034, z: 0}
+  m_LocalPosition: {x: 0, y: 336.00012, z: 0}
   m_LocalScale: {x: 0.14281373, y: 0.14281373, z: 0.42844117}
   m_Children: []
   m_Father: {fileID: 1990467316}
@@ -42658,7 +42658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740763048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18, y: 194.00034, z: 0}
+  m_LocalPosition: {x: 18, y: 336.00012, z: 0}
   m_LocalScale: {x: 0.14281373, y: 0.14281373, z: 0.42844117}
   m_Children: []
   m_Father: {fileID: 540430127}
@@ -50189,7 +50189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058470029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 194.00034, z: 0}
+  m_LocalPosition: {x: 10, y: 336.00012, z: 0}
   m_LocalScale: {x: 0.14281373, y: 0.14281373, z: 0.42844117}
   m_Children: []
   m_Father: {fileID: 1155014257}
@@ -52587,7 +52587,7 @@ PrefabInstance:
     - target: {fileID: 4642492577439174647, guid: 1005e697993f7861398b101be19b66b5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39522
+      value: -39431
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1005e697993f7861398b101be19b66b5, type: 3}
