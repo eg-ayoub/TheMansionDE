@@ -39,7 +39,8 @@ namespace Player.Health
                     if (!inMadness)
                     {
                         HP -= 1;
-                        HudScript.hud.UpdateHP(HP);
+                        // HudScript.hud.UpdateHP(HP);
+                        HudScript.hud.UpdateHPLastBroken(HP);
                     }
                     // if (!paused)
                     // {
@@ -110,6 +111,11 @@ namespace Player.Health
         public void ResetHP()
         {
             HP = Constants.PLAYER_MAX_HP;
+            HudScript.hud.UpdateHP(HP);
+        }
+
+        public void ResetHud()
+        {
             HudScript.hud.UpdateHP(HP);
         }
 

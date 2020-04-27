@@ -36,6 +36,11 @@ namespace UI.HUD
             hPDisplay.UpdateHP(HP);
         }
 
+        public void UpdateHPLastBroken(int HP)
+        {
+            hPDisplay.UpdateHPLastBroken(HP);
+        }
+
         public void MansionHP()
         {
             hPDisplay.Mansion();

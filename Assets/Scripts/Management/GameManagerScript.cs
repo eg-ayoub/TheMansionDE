@@ -368,6 +368,7 @@ namespace Management
 
             // * 7b set some UI stuff
             HudScript.hud.UpdateKeyStatus(false);
+            PlayerInstanciationScript.hpManager.ResetHud();
 
             // * 8 - freeze player and reset controls for 10 frames
             PlayerInstanciationScript.clipManager.Freeze();
