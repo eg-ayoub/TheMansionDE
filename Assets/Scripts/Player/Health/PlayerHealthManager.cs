@@ -18,10 +18,13 @@ namespace Player.Health
         /// current HP value
         /// </summary>
         [SerializeField] int HP;
+
+        DeathEffector deathEffector;
         private void Start()
         {
             HP = Constants.PLAYER_START_HP;
             HudScript.hud.UpdateHP(HP);
+            deathEffector = GetComponentInChildren<DeathEffector>();
         }
         // Update is called once per frame
         public void TakeDamage()
@@ -49,6 +52,7 @@ namespace Player.Health
                 }
                 CameraShaker shaker = FindObjectOfType<CameraShaker>();
                 if (shaker) shaker.Shake();
+                deathEffector.Play();
                 // StartCoroutine(ResetImmunity());
             }
         }
