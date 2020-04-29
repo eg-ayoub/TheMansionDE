@@ -52598,6 +52598,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1755786744285191327, guid: 7f416c96fbb7ba84782728c775596bef,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755786744285191327, guid: 7f416c96fbb7ba84782728c775596bef,
+        type: 3}
+      propertyPath: ShapeModule.type
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755786744285191327, guid: 7f416c96fbb7ba84782728c775596bef,
+        type: 3}
+      propertyPath: TrailModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755786744285191327, guid: 7f416c96fbb7ba84782728c775596bef,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     - target: {fileID: 2126406761289832274, guid: 7f416c96fbb7ba84782728c775596bef,
         type: 3}
       propertyPath: m_Volume
