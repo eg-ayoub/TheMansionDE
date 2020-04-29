@@ -282,7 +282,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 2892995142530162238}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
@@ -290,7 +290,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &4769731790653279154
@@ -354,8 +354,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3100821266037575661}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -90, z: 0}
-  m_LocalScale: {x: 500, y: 20, z: 1}
+  m_LocalPosition: {x: 0, y: -95.8, z: 0}
+  m_LocalScale: {x: 500, y: 29.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2892995142530162239}
   m_RootOrder: 0
