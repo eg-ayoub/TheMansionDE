@@ -13,7 +13,7 @@ namespace Environment.Platforms
 
         protected void OnTriggerEnter2D(Collider2D other)
         {
-            if ((other.CompareTag("Crawler") || other.CompareTag("Player")) && !paused)
+            if ((other.CompareTag("Crawler") || other.CompareTag("Player") || other.CompareTag("Sensor")) && !paused)
             {
                 playerOn = true;
                 PlayerOn();
@@ -21,7 +21,7 @@ namespace Environment.Platforms
         }
         protected void OnTriggerExit2D(Collider2D other)
         {
-            if ((other.CompareTag("Crawler") || other.CompareTag("Player")) && !paused)
+            if ((other.CompareTag("Crawler") || other.CompareTag("Player") || other.CompareTag("Sensor")) && !paused)
             {
                 playerOn = false;
                 PlayerOff();
